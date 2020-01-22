@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name ADT7311-Symbol)(type Legacy)(uri ${KIPRJMOD}/ADT7311-Symbol.lib)(options "")(descr ""))
+  (lib (name Torchic_Library)(type Legacy)(uri ${KIPRJMOD}/Torchic_Library.lib)(options "")(descr ""))
+)
