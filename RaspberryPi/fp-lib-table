@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name molex)(type KiCad)(uri ${KICAD_SYMBOL_DIR}/molex)(options "")(descr ""))
+)
