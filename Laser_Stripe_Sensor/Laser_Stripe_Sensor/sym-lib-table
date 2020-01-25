@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Laser_Stripe_Sensor-rescue)(type Legacy)(uri ${KIPRJMOD}/Laser_Stripe_Sensor-rescue.lib)(options "")(descr ""))
-)
