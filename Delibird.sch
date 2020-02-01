@@ -37,16 +37,8 @@ F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 5050 700 50  000
 $EndComp
 Text GLabel 6000 2100 0    50   Input ~ 0
 UIN
-Text GLabel 6000 2300 0    50   Input ~ 0
-CANH
-Wire Wire Line
-	6000 2300 6200 2300
 Wire Wire Line
 	6000 2100 6200 2100
-Text GLabel 6000 2400 0    50   Input ~ 0
-CANL
-Wire Wire Line
-	6000 2400 6200 2400
 Text GLabel 4650 950  0    50   Input ~ 0
 UIN
 Wire Wire Line
@@ -64,9 +56,9 @@ F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 4050 2300 50  0001 C
 	1    4050 2300
 	1    0    0    -1  
 $EndComp
-Text GLabel 4600 2400 2    50   Input ~ 0
+Text GLabel 4800 2550 2    50   Input ~ 0
 CANL
-Text GLabel 4600 2200 2    50   Input ~ 0
+Text GLabel 4800 2050 2    50   Input ~ 0
 CANH
 Wire Wire Line
 	3550 2700 4050 2700
@@ -141,10 +133,6 @@ Wire Wire Line
 	3650 3850 3700 3850
 Wire Wire Line
 	2500 2100 2500 2650
-Wire Wire Line
-	4600 2200 4550 2200
-Wire Wire Line
-	4600 2400 4550 2400
 Text Notes 7400 7250 0    50   ~ 0
 lindamao-waterloop/waterloop_electrical
 Text Notes 10550 7650 0    50   ~ 0
@@ -330,16 +318,14 @@ $EndComp
 $Comp
 L power:+5V #PWR0110
 U 1 1 5E318090
-P 4050 1850
-F 0 "#PWR0110" H 4050 1700 50  0001 C CNN
-F 1 "+5V" H 4065 2023 50  0000 C CNN
-F 2 "" H 4050 1850 50  0001 C CNN
-F 3 "" H 4050 1850 50  0001 C CNN
-	1    4050 1850
+P 4050 1650
+F 0 "#PWR0110" H 4050 1500 50  0001 C CNN
+F 1 "+5V" H 4150 1700 50  0000 C CNN
+F 2 "" H 4050 1650 50  0001 C CNN
+F 3 "" H 4050 1650 50  0001 C CNN
+	1    4050 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4050 1900 4050 1850
 Wire Wire Line
 	4050 2750 4050 2700
 Connection ~ 4050 2700
@@ -646,17 +632,6 @@ Wire Wire Line
 Wire Wire Line
 	2500 3850 3650 3850
 $Comp
-L Connector:Conn_01x04_Male J2
-U 1 1 5E2C44CB
-P 6400 2200
-F 0 "J2" H 6500 1900 50  0000 R CNN
-F 1 "Conn_01x04_Male" H 6372 2173 50  0001 R CNN
-F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 6400 2200 50  0001 C CNN
-F 3 "~" H 6400 2200 50  0001 C CNN
-	1    6400 2200
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:Earth #PWR0114
 U 1 1 5E35CF46
 P 2400 5150
@@ -713,4 +688,79 @@ F 3 "~" H 2400 4700 50  0001 C CNN
 	1    2400 4700
 	1    0    0    1   
 $EndComp
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5E2C44CB
+P 6400 2200
+F 0 "J2" H 6500 1900 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 6372 2173 50  0001 R CNN
+F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 6400 2200 50  0001 C CNN
+F 3 "~" H 6400 2200 50  0001 C CNN
+	1    6400 2200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2400 6200 2400
+Wire Wire Line
+	6000 2300 6200 2300
+Text GLabel 6000 2300 0    50   Input ~ 0
+CANH
+Text GLabel 6000 2400 0    50   Input ~ 0
+CANL
+$Comp
+L Device:R R2
+U 1 1 5E2D33A5
+P 4800 2300
+F 0 "R2" H 4870 2346 50  0000 L CNN
+F 1 "120" H 4870 2255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4730 2300 50  0001 C CNN
+F 3 "~" H 4800 2300 50  0001 C CNN
+	1    4800 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2400 4550 2450
+Wire Wire Line
+	4550 2450 4800 2450
+Wire Wire Line
+	4800 2550 4800 2450
+Connection ~ 4800 2450
+Wire Wire Line
+	4550 2200 4550 2150
+Wire Wire Line
+	4550 2150 4800 2150
+Wire Wire Line
+	4800 2050 4800 2150
+Connection ~ 4800 2150
+Wire Wire Line
+	4050 1650 4050 1800
+$Comp
+L Device:C C9
+U 1 1 5E352D2F
+P 4300 1800
+F 0 "C9" V 4450 1750 50  0000 L CNN
+F 1 "100n" V 4450 1550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4338 1650 50  0001 C CNN
+F 3 "~" H 4300 1800 50  0001 C CNN
+	1    4300 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5E352D35
+P 4550 1800
+F 0 "#PWR?" H 4550 1550 50  0001 C CNN
+F 1 "Earth" H 4550 1650 50  0001 C CNN
+F 2 "" H 4550 1800 50  0001 C CNN
+F 3 "~" H 4550 1800 50  0001 C CNN
+	1    4550 1800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 1800 4550 1800
+Wire Wire Line
+	4150 1800 4050 1800
+Connection ~ 4050 1800
+Wire Wire Line
+	4050 1800 4050 1900
 $EndSCHEMATC
