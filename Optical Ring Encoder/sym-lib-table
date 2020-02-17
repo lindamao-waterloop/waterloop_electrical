@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Optical-Ring-Encoder-rescue)(type Legacy)(uri "${KIPRJMOD}/Optical Ring Encoder-rescue.lib")(options "")(descr ""))
+)
