@@ -86,28 +86,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8209-8-bit%20AVR%20AT
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
-U 1 1 5E206CE8
-P 3950 3250
-F 0 "R1" V 3743 3250 50  0000 C CNN
-F 1 "10k" V 3834 3250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3880 3250 50  0001 C CNN
-F 3 "~" H 3950 3250 50  0001 C CNN
-	1    3950 3250
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:AVR-ISP-6 J1
-U 1 1 5E1F8DCB
-P 4100 3750
-F 0 "J1" H 4400 3400 50  0000 R CNN
-F 1 "ISP-6" H 4400 3300 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 3850 3800 50  0001 C CNN
-F 3 " ~" H 2825 3200 50  0001 C CNN
-	1    4100 3750
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C C2
 U 1 1 5E1FB8C9
 P 5700 1100
@@ -125,8 +103,6 @@ Wire Wire Line
 Wire Wire Line
 	1900 3550 3700 3550
 Wire Wire Line
-	3650 3250 3650 3850
-Wire Wire Line
 	1900 4350 2550 4350
 Wire Wire Line
 	1900 4450 2250 4450
@@ -134,11 +110,6 @@ Wire Wire Line
 	2250 4450 2250 4700
 Wire Wire Line
 	2500 4250 2500 3850
-Wire Wire Line
-	3650 3250 3800 3250
-Connection ~ 3650 3850
-Wire Wire Line
-	3650 3850 3700 3850
 Wire Wire Line
 	2500 2100 2500 2650
 Wire Wire Line
@@ -343,22 +314,6 @@ Wire Wire Line
 Wire Wire Line
 	4050 2750 4050 2700
 Connection ~ 4050 2700
-$Comp
-L power:+5V #PWR0111
-U 1 1 5E3265FD
-P 4200 3200
-F 0 "#PWR0111" H 4200 3050 50  0001 C CNN
-F 1 "+5V" H 4215 3373 50  0000 C CNN
-F 2 "" H 4200 3200 50  0001 C CNN
-F 3 "" H 4200 3200 50  0001 C CNN
-	1    4200 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 3250 4200 3250
-Wire Wire Line
-	4200 3200 4200 3250
-Connection ~ 4200 3250
 Wire Wire Line
 	2800 1250 2800 1350
 Wire Wire Line
@@ -643,8 +598,6 @@ Wire Wire Line
 Connection ~ 5950 950 
 Wire Wire Line
 	5950 950  6150 950 
-Wire Wire Line
-	2500 3850 3650 3850
 $Comp
 L Connector:Conn_01x04_Male J2
 U 1 1 5E2C44CB
@@ -679,29 +632,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 5000 2250 5100
 Connection ~ 2550 4700
-$Comp
-L Device:C C6
-U 1 1 5E2097DA
-P 2550 4850
-F 0 "C6" H 2665 4896 50  0000 L CNN
-F 1 "20p" H 2665 4805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2588 4700 50  0001 C CNN
-F 3 "~" H 2550 4850 50  0001 C CNN
-	1    2550 4850
-	1    0    0    -1  
-$EndComp
 Connection ~ 2250 4700
-$Comp
-L Device:C C5
-U 1 1 5E20A4E1
-P 2250 4850
-F 0 "C5" H 2365 4896 50  0000 L CNN
-F 1 "20p" H 2365 4805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2288 4700 50  0001 C CNN
-F 3 "~" H 2250 4850 50  0001 C CNN
-	1    2250 4850
-	-1   0    0    -1  
-$EndComp
 $Comp
 L Device:Crystal Y1
 U 1 1 5E2084F5
@@ -882,4 +813,70 @@ F 3 "~" H 6800 3750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6800 3550 6800 3750
+$Comp
+L Device:C C6
+U 1 1 5E2097DA
+P 2550 4850
+F 0 "C6" H 2665 4896 50  0000 L CNN
+F 1 "20p" H 2665 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2588 4700 50  0001 C CNN
+F 3 "~" H 2550 4850 50  0001 C CNN
+	1    2550 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 5E20A4E1
+P 2250 4850
+F 0 "C5" H 2365 4896 50  0000 L CNN
+F 1 "20p" H 2365 4805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2288 4700 50  0001 C CNN
+F 3 "~" H 2250 4850 50  0001 C CNN
+	1    2250 4850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3850 3550 3850
+$Comp
+L Device:R R1
+U 1 1 5E206CE8
+P 3550 3250
+F 0 "R1" V 3343 3250 50  0000 C CNN
+F 1 "10k" V 3434 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3480 3250 50  0001 C CNN
+F 3 "~" H 3550 3250 50  0001 C CNN
+	1    3550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AVR-ISP-6 J1
+U 1 1 5E1F8DCB
+P 4100 3750
+F 0 "J1" H 4400 3400 50  0000 R CNN
+F 1 "ISP-6" H 4400 3300 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 3850 3800 50  0001 C CNN
+F 3 " ~" H 2825 3200 50  0001 C CNN
+	1    4100 3750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3400 3550 3850
+Connection ~ 3550 3850
+Wire Wire Line
+	3550 3850 3700 3850
+Text GLabel 4200 3250 1    50   Input ~ 0
+UIN
+$Comp
+L power:+5V #PWR?
+U 1 1 5E5EB9CC
+P 3550 3100
+F 0 "#PWR?" H 3550 2950 50  0001 C CNN
+F 1 "+5V" H 3565 3273 50  0000 C CNN
+F 2 "" H 3550 3100 50  0001 C CNN
+F 3 "" H 3550 3100 50  0001 C CNN
+	1    3550 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3150 3550 3100
 $EndSCHEMATC
