@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name SI-52008-F)(type KiCad)(uri ${KIPRJMOD}/SI-52008-F)(options "")(descr ""))
+  (lib (name KSZ8863RLL)(type KiCad)(uri ${KIPRJMOD}/KSZ8863RLL)(options "")(descr ""))
+)
