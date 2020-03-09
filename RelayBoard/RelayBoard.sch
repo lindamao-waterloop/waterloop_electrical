@@ -1214,20 +1214,9 @@ Text GLabel 8600 3000 3    50   Input ~ 0
 GND
 Text GLabel 8600 2800 2    50   Input ~ 0
 5V
-$Comp
-L Device:Jumper_NO_Small JP1
-U 1 1 5E87BCA4
-P 8350 2150
-F 0 "JP1" H 8350 2335 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 8350 2244 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 8350 2150 50  0001 C CNN
-F 3 "~" H 8350 2150 50  0001 C CNN
-	1    8350 2150
-	1    0    0    -1  
-$EndComp
-Text GLabel 8250 2150 0    50   Input ~ 0
+Text GLabel 7950 2150 0    50   Input ~ 0
 5V_CAN
-Text GLabel 8450 2150 2    50   Input ~ 0
+Text GLabel 8150 2150 2    50   Input ~ 0
 5V
 Text GLabel 1650 6900 0    50   Input ~ 0
 24V
@@ -1392,4 +1381,15 @@ Text GLabel 6600 2050 1    50   Input ~ 0
 SWCLK
 Text GLabel 6700 2050 1    50   Input ~ 0
 GND
+$Comp
+L Device:R_Small_US R15
+U 1 1 5E863A07
+P 8050 2150
+F 0 "R15" V 7845 2150 50  0000 C CNN
+F 1 "0Ω" V 7936 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8050 2150 50  0001 C CNN
+F 3 "~" H 8050 2150 50  0001 C CNN
+	1    8050 2150
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

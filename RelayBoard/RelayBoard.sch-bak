@@ -1214,20 +1214,9 @@ Text GLabel 8600 3000 3    50   Input ~ 0
 GND
 Text GLabel 8600 2800 2    50   Input ~ 0
 5V
-$Comp
-L Device:Jumper_NO_Small JP1
-U 1 1 5E87BCA4
-P 8350 2150
-F 0 "JP1" H 8350 2335 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 8350 2244 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 8350 2150 50  0001 C CNN
-F 3 "~" H 8350 2150 50  0001 C CNN
-	1    8350 2150
-	1    0    0    -1  
-$EndComp
-Text GLabel 8250 2150 0    50   Input ~ 0
+Text GLabel 7950 2150 0    50   Input ~ 0
 5V_CAN
-Text GLabel 8450 2150 2    50   Input ~ 0
+Text GLabel 8150 2150 2    50   Input ~ 0
 5V
 Text GLabel 1650 6900 0    50   Input ~ 0
 24V
@@ -1369,44 +1358,6 @@ F 3 "~" H 9050 2000 50  0001 C CNN
 	1    9050 2000
 	1    0    0    -1  
 $EndComp
-Text GLabel 9800 2450 2    50   Input ~ 0
-5V_CAN
-Text GLabel 9800 2750 2    50   Input ~ 0
-GND
-Text GLabel 9800 2650 2    50   Input ~ 0
-CANL
-Text GLabel 9800 2550 2    50   Input ~ 0
-CANH
-$Comp
-L Connector:Conn_01x04_Male J12
-U 1 1 5E8BA6D1
-P 9600 2550
-F 0 "J12" H 9708 2831 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 9708 2740 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9600 2550 50  0001 C CNN
-F 3 "~" H 9600 2550 50  0001 C CNN
-	1    9600 2550
-	1    0    0    -1  
-$EndComp
-Text GLabel 9250 2450 2    50   Input ~ 0
-5V_CAN
-Text GLabel 9250 2750 2    50   Input ~ 0
-GND
-Text GLabel 9250 2650 2    50   Input ~ 0
-CANL
-Text GLabel 9250 2550 2    50   Input ~ 0
-CANH
-$Comp
-L Connector:Conn_01x04_Male J6
-U 1 1 5E8BA6DB
-P 9050 2550
-F 0 "J6" H 9158 2831 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 9158 2740 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9050 2550 50  0001 C CNN
-F 3 "~" H 9050 2550 50  0001 C CNN
-	1    9050 2550
-	1    0    0    -1  
-$EndComp
 Text GLabel 3450 2500 2    50   Input ~ 0
 SWDIO
 Text GLabel 3450 2600 2    50   Input ~ 0
@@ -1430,4 +1381,15 @@ Text GLabel 6600 2050 1    50   Input ~ 0
 SWCLK
 Text GLabel 6700 2050 1    50   Input ~ 0
 GND
+$Comp
+L Device:R_Small_US R?
+U 1 1 5E863A07
+P 8050 2150
+F 0 "R?" V 7845 2150 50  0000 C CNN
+F 1 "0Ω" V 7936 2150 50  0000 C CNN
+F 2 "" H 8050 2150 50  0001 C CNN
+F 3 "~" H 8050 2150 50  0001 C CNN
+	1    8050 2150
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
