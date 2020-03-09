@@ -17,42 +17,42 @@ $EndDescr
 $Comp
 L Connector:Screw_Terminal_01x02 J2
 U 1 1 5E6836EC
-P 7850 1700
-F 0 "J2" H 7930 1692 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 7930 1601 50  0000 L CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 7850 1700 50  0001 C CNN
-F 3 "~" H 7850 1700 50  0001 C CNN
-	1    7850 1700
+P 7600 1650
+F 0 "J2" H 7680 1642 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 7680 1551 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 7600 1650 50  0001 C CNN
+F 3 "~" H 7600 1650 50  0001 C CNN
+	1    7600 1650
 	1    0    0    -1  
 $EndComp
-Text GLabel 7700 1100 2    50   Input ~ 0
+Text GLabel 7450 1050 2    50   Input ~ 0
 CANH
-Text GLabel 7700 1300 2    50   Input ~ 0
+Text GLabel 7450 1250 2    50   Input ~ 0
 CANL
-Text GLabel 6700 1000 0    50   Input ~ 0
+Text GLabel 6450 950  0    50   Input ~ 0
 CANTX
-Text GLabel 6700 1100 0    50   Input ~ 0
+Text GLabel 6450 1050 0    50   Input ~ 0
 CANRX
 $Comp
 L Interface_CAN_LIN:TJA1051T-3 U3
 U 1 1 5E6B6C50
-P 7200 1200
-F 0 "U3" H 7200 1781 50  0000 C CNN
-F 1 "TJA1051T-3" H 7200 1690 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7200 700 50  0001 C CIN
-F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 7200 1200 50  0001 C CNN
-	1    7200 1200
+P 6950 1150
+F 0 "U3" H 6950 1731 50  0000 C CNN
+F 1 "TJA1051T-3" H 6950 1640 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6950 650 50  0001 C CIN
+F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 6950 1150 50  0001 C CNN
+	1    6950 1150
 	1    0    0    -1  
 $EndComp
-Text GLabel 7200 1600 3    50   Input ~ 0
+Text GLabel 6950 1550 3    50   Input ~ 0
 GND
-Text GLabel 6700 1400 0    50   Input ~ 0
+Text GLabel 6450 1350 0    50   Input ~ 0
 GND
-Text GLabel 6700 1300 0    50   Input ~ 0
+Text GLabel 6450 1250 0    50   Input ~ 0
 3V3
-Text GLabel 7650 1700 0    50   Input ~ 0
+Text GLabel 7400 1650 0    50   Input ~ 0
 24V
-Text GLabel 7650 1800 0    50   Input ~ 0
+Text GLabel 7400 1750 0    50   Input ~ 0
 GND
 $Comp
 L SI-52008-F:SI-52008-F J7
@@ -785,31 +785,31 @@ $EndComp
 $Comp
 L Regulator_Linear:LF33_TO252 U4
 U 1 1 5E6D356C
-P 8300 850
-F 0 "U4" H 8300 1092 50  0000 C CNN
-F 1 "LF33_TO252" H 8300 1001 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 8300 1075 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c4/0e/7e/2a/be/bc/4c/bd/CD00000546.pdf/files/CD00000546.pdf/jcr:content/translations/en.CD00000546.pdf" H 8300 800 50  0001 C CNN
-	1    8300 850 
+P 8050 800
+F 0 "U4" H 8050 1042 50  0000 C CNN
+F 1 "LF33_TO252" H 8050 951 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 8050 1025 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c4/0e/7e/2a/be/bc/4c/bd/CD00000546.pdf/files/CD00000546.pdf/jcr:content/translations/en.CD00000546.pdf" H 8050 750 50  0001 C CNN
+	1    8050 800 
 	1    0    0    -1  
 $EndComp
-Text GLabel 8000 850  0    50   Input ~ 0
+Text GLabel 7750 800  0    50   Input ~ 0
 5V
-Text GLabel 8600 850  2    50   Input ~ 0
+Text GLabel 8350 800  2    50   Input ~ 0
 3V3
-Text GLabel 8300 1150 3    50   Input ~ 0
+Text GLabel 8050 1100 3    50   Input ~ 0
 GND
-Text GLabel 6250 1950 2    50   Input ~ 0
+Text GLabel 6000 1850 2    50   Input ~ 0
 GND
 $Comp
 L Connector:Micro_SD_Card J1
 U 1 1 5E66B127
-P 5450 1350
-F 0 "J1" H 5400 2067 50  0000 C CNN
-F 1 "Micro_SD_Card" H 5400 1976 50  0000 C CNN
-F 2 "Connector_Card:microSD_HC_Wuerth_693072010801" H 6600 1650 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 5450 1350 50  0001 C CNN
-	1    5450 1350
+P 5200 1250
+F 0 "J1" H 5150 1967 50  0000 C CNN
+F 1 "Micro_SD_Card" H 5150 1876 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Wuerth_693072010801" H 6350 1550 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 5200 1250 50  0001 C CNN
+	1    5200 1250
 	1    0    0    -1  
 $EndComp
 Text GLabel 1550 4600 0    50   Input ~ 0
@@ -830,21 +830,21 @@ Text GLabel 3450 5000 2    50   Input ~ 0
 RXD0
 Text GLabel 3450 5100 2    50   Input ~ 0
 RXD1
-Text GLabel 4550 1650 0    50   Input ~ 0
+Text GLabel 4300 1550 0    50   Input ~ 0
 SD_D0
-Text GLabel 4550 1750 0    50   Input ~ 0
+Text GLabel 4300 1650 0    50   Input ~ 0
 SD_D1
-Text GLabel 4550 1050 0    50   Input ~ 0
+Text GLabel 4300 950  0    50   Input ~ 0
 SD_D2
-Text GLabel 4550 1150 0    50   Input ~ 0
+Text GLabel 4300 1050 0    50   Input ~ 0
 SD_D3
-Text GLabel 4550 1450 0    50   Input ~ 0
+Text GLabel 4300 1350 0    50   Input ~ 0
 SD_CLK
-Text GLabel 4550 1250 0    50   Input ~ 0
+Text GLabel 4300 1150 0    50   Input ~ 0
 SD_CMD
-Text GLabel 4550 1550 0    50   Input ~ 0
+Text GLabel 4300 1450 0    50   Input ~ 0
 GND
-Text GLabel 4550 1350 0    50   Input ~ 0
+Text GLabel 4300 1250 0    50   Input ~ 0
 3V3
 Text GLabel 3450 5400 2    50   Input ~ 0
 SD_D0
@@ -886,8 +886,6 @@ NoConn ~ 3450 2100
 NoConn ~ 3450 2200
 NoConn ~ 3450 2300
 NoConn ~ 3450 2400
-NoConn ~ 3450 2500
-NoConn ~ 3450 2600
 NoConn ~ 3450 2700
 NoConn ~ 3450 2900
 NoConn ~ 3450 3000
@@ -1142,94 +1140,94 @@ RX2-
 $Comp
 L Device:C_Small C21
 U 1 1 5E84FFB9
-P 6950 2300
-F 0 "C21" H 7042 2346 50  0000 L CNN
-F 1 "100uF" H 7042 2255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6950 2300 50  0001 C CNN
-F 3 "~" H 6950 2300 50  0001 C CNN
-	1    6950 2300
+P 7100 2700
+F 0 "C21" H 7192 2746 50  0000 L CNN
+F 1 "100uF" H 7192 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7100 2700 50  0001 C CNN
+F 3 "~" H 7100 2700 50  0001 C CNN
+	1    7100 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 7650 2600 3    50   Input ~ 0
+Text GLabel 7800 3000 3    50   Input ~ 0
 GND
 $Comp
 L Regulator_Switching:LM2575-5.0BU U5
 U 1 1 5E84DD3F
-P 7650 2300
-F 0 "U5" H 7650 2667 50  0000 C CNN
-F 1 "LM2575-5.0BU" H 7650 2576 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 7650 2050 50  0001 L CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf" H 7650 2300 50  0001 C CNN
-	1    7650 2300
+P 7800 2700
+F 0 "U5" H 7800 3067 50  0000 C CNN
+F 1 "LM2575-5.0BU" H 7800 2976 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 7800 2450 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf" H 7800 2700 50  0001 C CNN
+	1    7800 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 7150 2400 3    50   Input ~ 0
+Text GLabel 7300 2800 3    50   Input ~ 0
 GND
 Wire Wire Line
-	6950 2200 7150 2200
-Text GLabel 6950 2200 0    50   Input ~ 0
+	7100 2600 7300 2600
+Text GLabel 7100 2600 0    50   Input ~ 0
 24V
-Text GLabel 6950 2400 3    50   Input ~ 0
+Text GLabel 7100 2800 3    50   Input ~ 0
 GND
 $Comp
 L Diode:1N5822 D2
 U 1 1 5E8672B7
-P 8150 2550
-F 0 "D2" V 8104 2629 50  0000 L CNN
-F 1 "1N5822" V 8195 2629 50  0000 L CNN
-F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 8150 2375 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 8150 2550 50  0001 C CNN
-	1    8150 2550
+P 8300 2950
+F 0 "D2" V 8254 3029 50  0000 L CNN
+F 1 "1N5822" V 8345 3029 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 8300 2775 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 8300 2950 50  0001 C CNN
+	1    8300 2950
 	0    1    1    0   
 $EndComp
-Connection ~ 8150 2400
+Connection ~ 8300 2800
 $Comp
 L Device:L L1
 U 1 1 5E8687D9
-P 8300 2400
-F 0 "L1" V 8490 2400 50  0000 C CNN
-F 1 "330uH" V 8399 2400 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8300 2400 50  0001 C CNN
-F 3 "~" H 8300 2400 50  0001 C CNN
-	1    8300 2400
+P 8450 2800
+F 0 "L1" V 8640 2800 50  0000 C CNN
+F 1 "330uH" V 8549 2800 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8450 2800 50  0001 C CNN
+F 3 "~" H 8450 2800 50  0001 C CNN
+	1    8450 2800
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C_Small C22
 U 1 1 5E86EE8D
-P 8450 2500
-F 0 "C22" H 8542 2546 50  0000 L CNN
-F 1 "330uF" H 8542 2455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8450 2500 50  0001 C CNN
-F 3 "~" H 8450 2500 50  0001 C CNN
-	1    8450 2500
+P 8600 2900
+F 0 "C22" H 8692 2946 50  0000 L CNN
+F 1 "330uF" H 8692 2855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8600 2900 50  0001 C CNN
+F 3 "~" H 8600 2900 50  0001 C CNN
+	1    8600 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8150 2200 8450 2200
+	8300 2600 8600 2600
 Wire Wire Line
-	8450 2200 8450 2400
-Connection ~ 8450 2400
-Text GLabel 8150 2700 3    50   Input ~ 0
+	8600 2600 8600 2800
+Connection ~ 8600 2800
+Text GLabel 8300 3100 3    50   Input ~ 0
 GND
-Text GLabel 8450 2600 3    50   Input ~ 0
+Text GLabel 8600 3000 3    50   Input ~ 0
 GND
-Text GLabel 8450 2400 2    50   Input ~ 0
+Text GLabel 8600 2800 2    50   Input ~ 0
 5V
 $Comp
 L Device:Jumper_NO_Small JP1
 U 1 1 5E87BCA4
-P 7600 3100
-F 0 "JP1" H 7600 3285 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 7600 3194 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 7600 3100 50  0001 C CNN
-F 3 "~" H 7600 3100 50  0001 C CNN
-	1    7600 3100
+P 8350 2150
+F 0 "JP1" H 8350 2335 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 8350 2244 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 8350 2150 50  0001 C CNN
+F 3 "~" H 8350 2150 50  0001 C CNN
+	1    8350 2150
 	1    0    0    -1  
 $EndComp
-Text GLabel 7500 3100 0    50   Input ~ 0
+Text GLabel 8250 2150 0    50   Input ~ 0
 5V_CAN
-Text GLabel 7700 3100 2    50   Input ~ 0
+Text GLabel 8450 2150 2    50   Input ~ 0
 5V
 Text GLabel 1650 6900 0    50   Input ~ 0
 24V
@@ -1255,7 +1253,7 @@ F 3 "" H 1650 6900 50  0001 C CNN
 	1    1650 6900
 	1    0    0    -1  
 $EndComp
-Text GLabel 7200 800  1    50   Input ~ 0
+Text GLabel 6950 750  1    50   Input ~ 0
 5V
 Text GLabel 9800 800  2    50   Input ~ 0
 5V_CAN
@@ -1271,7 +1269,7 @@ U 1 1 5E6B95E1
 P 9600 900
 F 0 "J9" H 9708 1181 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 9708 1090 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9600 900 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9600 900 50  0001 C CNN
 F 3 "~" H 9600 900 50  0001 C CNN
 	1    9600 900 
 	1    0    0    -1  
@@ -1290,7 +1288,7 @@ U 1 1 5E689F37
 P 9050 900
 F 0 "J3" H 9158 1181 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 9158 1090 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9050 900 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9050 900 50  0001 C CNN
 F 3 "~" H 9050 900 50  0001 C CNN
 	1    9050 900 
 	1    0    0    -1  
@@ -1309,7 +1307,7 @@ U 1 1 5E8B611B
 P 9600 1450
 F 0 "J10" H 9708 1731 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 9708 1640 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9600 1450 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9600 1450 50  0001 C CNN
 F 3 "~" H 9600 1450 50  0001 C CNN
 	1    9600 1450
 	1    0    0    -1  
@@ -1328,7 +1326,7 @@ U 1 1 5E8B6125
 P 9050 1450
 F 0 "J4" H 9158 1731 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 9158 1640 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9050 1450 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9050 1450 50  0001 C CNN
 F 3 "~" H 9050 1450 50  0001 C CNN
 	1    9050 1450
 	1    0    0    -1  
@@ -1347,7 +1345,7 @@ U 1 1 5E8B843F
 P 9600 2000
 F 0 "J11" H 9708 2281 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 9708 2190 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9600 2000 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9600 2000 50  0001 C CNN
 F 3 "~" H 9600 2000 50  0001 C CNN
 	1    9600 2000
 	1    0    0    -1  
@@ -1366,47 +1364,32 @@ U 1 1 5E8B8449
 P 9050 2000
 F 0 "J5" H 9158 2281 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 9158 2190 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9050 2000 50  0001 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-AM_1x04_P2.50mm_Vertical" H 9050 2000 50  0001 C CNN
 F 3 "~" H 9050 2000 50  0001 C CNN
 	1    9050 2000
 	1    0    0    -1  
 $EndComp
-Text GLabel 9800 2450 2    50   Input ~ 0
-5V_CAN
-Text GLabel 9800 2750 2    50   Input ~ 0
-GND
-Text GLabel 9800 2650 2    50   Input ~ 0
-CANL
-Text GLabel 9800 2550 2    50   Input ~ 0
-CANH
+Text GLabel 3450 2500 2    50   Input ~ 0
+SWDIO
+Text GLabel 3450 2600 2    50   Input ~ 0
+SWCLK
 $Comp
-L Connector:Conn_01x04_Male J12
-U 1 1 5E8BA6D1
-P 9600 2550
-F 0 "J12" H 9708 2831 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 9708 2740 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9600 2550 50  0001 C CNN
-F 3 "~" H 9600 2550 50  0001 C CNN
-	1    9600 2550
-	1    0    0    -1  
+L Connector:Conn_01x04_Male J13
+U 1 1 5E67695C
+P 6500 2250
+F 0 "J13" V 6562 2394 50  0000 L CNN
+F 1 "Conn_01x04_Male" V 6653 2394 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6500 2250 50  0001 C CNN
+F 3 "~" H 6500 2250 50  0001 C CNN
+	1    6500 2250
+	0    -1   -1   0   
 $EndComp
-Text GLabel 9250 2450 2    50   Input ~ 0
-5V_CAN
-Text GLabel 9250 2750 2    50   Input ~ 0
+Text GLabel 6400 2050 1    50   Input ~ 0
+5V
+Text GLabel 6500 2050 1    50   Input ~ 0
+SWDIO
+Text GLabel 6600 2050 1    50   Input ~ 0
+SWCLK
+Text GLabel 6700 2050 1    50   Input ~ 0
 GND
-Text GLabel 9250 2650 2    50   Input ~ 0
-CANL
-Text GLabel 9250 2550 2    50   Input ~ 0
-CANH
-$Comp
-L Connector:Conn_01x04_Male J6
-U 1 1 5E8BA6DB
-P 9050 2550
-F 0 "J6" H 9158 2831 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 9158 2740 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 9050 2550 50  0001 C CNN
-F 3 "~" H 9050 2550 50  0001 C CNN
-	1    9050 2550
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC
