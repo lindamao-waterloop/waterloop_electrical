@@ -1387,7 +1387,7 @@ U 1 1 5E863A07
 P 8050 2150
 F 0 "R15" V 7845 2150 50  0000 C CNN
 F 1 "0Ω" V 7936 2150 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8050 2150 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 8050 2150 50  0001 C CNN
 F 3 "~" H 8050 2150 50  0001 C CNN
 	1    8050 2150
 	0    1    1    0   
