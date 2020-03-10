@@ -1207,10 +1207,8 @@ Text GLabel 8600 3000 3    50   Input ~ 0
 GND
 Text GLabel 8600 2800 2    50   Input ~ 0
 5V
-Text GLabel 7950 2150 0    50   Input ~ 0
+Text GLabel 7850 2150 0    50   Input ~ 0
 5V_CAN
-Text GLabel 8150 2150 2    50   Input ~ 0
-5V
 Text GLabel 1650 6900 0    50   Input ~ 0
 24V
 $Comp
@@ -1377,12 +1375,12 @@ GND
 $Comp
 L Device:R_Small_US R15
 U 1 1 5E863A07
-P 8050 2150
-F 0 "R15" V 7845 2150 50  0000 C CNN
-F 1 "0Ω" V 7936 2150 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 8050 2150 50  0001 C CNN
-F 3 "~" H 8050 2150 50  0001 C CNN
-	1    8050 2150
+P 7950 2150
+F 0 "R15" V 7745 2150 50  0000 C CNN
+F 1 "0Ω" V 7836 2150 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7950 2150 50  0001 C CNN
+F 3 "~" H 7950 2150 50  0001 C CNN
+	1    7950 2150
 	0    1    1    0   
 $EndComp
 Text GLabel 3150 1250 2    50   Input ~ 0
@@ -1424,4 +1422,17 @@ Connection ~ 1250 1650
 Wire Wire Line
 	3950 5100 4350 5100
 NoConn ~ 4350 5500
+Text GLabel 8350 2150 2    50   Input ~ 0
+5V
+$Comp
+L Device:Polyfuse F1
+U 1 1 5EA76ED7
+P 8200 2150
+F 0 "F1" V 7975 2150 50  0000 C CNN
+F 1 "1A" V 8066 2150 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8250 1950 50  0001 L CNN
+F 3 "~" H 8200 2150 50  0001 C CNN
+	1    8200 2150
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
