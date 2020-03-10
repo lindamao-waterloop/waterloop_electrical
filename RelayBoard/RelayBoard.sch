@@ -408,7 +408,6 @@ Text GLabel 6350 2600 2    50   Input ~ 0
 VDDA_3.3
 Text GLabel 6350 2700 2    50   Input ~ 0
 3V3
-NoConn ~ 4350 5500
 Text GLabel 4350 5400 0    50   Input ~ 0
 25MHz
 Text GLabel 4350 3500 0    50   Input ~ 0
@@ -556,9 +555,6 @@ P2LED1
 Text GLabel 6350 4800 2    50   Input ~ 0
 P2LED2
 NoConn ~ 4350 3100
-NoConn ~ 4350 4900
-NoConn ~ 4350 5000
-NoConn ~ 4350 5200
 Connection ~ 5000 7600
 Wire Wire Line
 	5000 7600 5350 7600
@@ -812,23 +808,23 @@ F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 5200 1250 50  
 	1    5200 1250
 	1    0    0    -1  
 $EndComp
-Text GLabel 1550 4600 0    50   Input ~ 0
+Text GLabel 1250 4450 0    50   Input ~ 0
 CANRX
-Text GLabel 1550 4700 0    50   Input ~ 0
+Text GLabel 1250 4550 0    50   Input ~ 0
 CANTX
-Text GLabel 3450 1300 2    50   Input ~ 0
+Text GLabel 3150 1150 2    50   Input ~ 0
 REF_CLK
-Text GLabel 3450 1900 2    50   Input ~ 0
+Text GLabel 3150 1750 2    50   Input ~ 0
 CRS_DV
-Text GLabel 3450 4000 2    50   Input ~ 0
+Text GLabel 3150 3850 2    50   Input ~ 0
 TX_EN
-Text GLabel 3450 4100 2    50   Input ~ 0
+Text GLabel 3150 3950 2    50   Input ~ 0
 TXD0
-Text GLabel 3450 4200 2    50   Input ~ 0
+Text GLabel 3150 4050 2    50   Input ~ 0
 TXD1
-Text GLabel 3450 5000 2    50   Input ~ 0
+Text GLabel 3150 4850 2    50   Input ~ 0
 RXD0
-Text GLabel 3450 5100 2    50   Input ~ 0
+Text GLabel 3150 4950 2    50   Input ~ 0
 RXD1
 Text GLabel 4300 1550 0    50   Input ~ 0
 SD_D0
@@ -846,121 +842,119 @@ Text GLabel 4300 1450 0    50   Input ~ 0
 GND
 Text GLabel 4300 1250 0    50   Input ~ 0
 3V3
-Text GLabel 3450 5400 2    50   Input ~ 0
+Text GLabel 3150 5250 2    50   Input ~ 0
 SD_D0
-Text GLabel 3450 5500 2    50   Input ~ 0
+Text GLabel 3150 5350 2    50   Input ~ 0
 SD_D1
-Text GLabel 3450 5600 2    50   Input ~ 0
+Text GLabel 3150 5450 2    50   Input ~ 0
 SD_D2
-Text GLabel 3450 5700 2    50   Input ~ 0
+Text GLabel 3150 5550 2    50   Input ~ 0
 SD_D3
-Text GLabel 3450 5800 2    50   Input ~ 0
+Text GLabel 3150 5650 2    50   Input ~ 0
 SD_CLK
-Text GLabel 1550 4800 0    50   Input ~ 0
+Text GLabel 1250 4650 0    50   Input ~ 0
 SD_CMD
-NoConn ~ 1550 4900
-NoConn ~ 1550 5000
-NoConn ~ 1550 5100
-NoConn ~ 1550 5200
-NoConn ~ 1550 5300
-NoConn ~ 1550 5400
-NoConn ~ 1550 5500
-NoConn ~ 1550 5600
-NoConn ~ 1550 5700
-NoConn ~ 1550 5800
-NoConn ~ 1550 5900
-NoConn ~ 1550 6000
-NoConn ~ 1550 6100
-Text GLabel 2850 6400 2    50   Input ~ 0
+NoConn ~ 1250 4750
+NoConn ~ 1250 4850
+NoConn ~ 1250 4950
+NoConn ~ 1250 5050
+NoConn ~ 1250 5150
+NoConn ~ 1250 5250
+NoConn ~ 1250 5350
+NoConn ~ 1250 5450
+NoConn ~ 1250 5550
+NoConn ~ 1250 5650
+NoConn ~ 1250 5750
+NoConn ~ 1250 5850
+NoConn ~ 1250 5950
+Text GLabel 2550 6250 2    50   Input ~ 0
 GND
-Text GLabel 2950 900  2    50   Input ~ 0
+Text GLabel 2650 750  2    50   Input ~ 0
 3V3
-NoConn ~ 3450 1200
-NoConn ~ 3450 1400
-NoConn ~ 3450 1500
-NoConn ~ 3450 1600
-NoConn ~ 3450 1700
-NoConn ~ 3450 1800
-NoConn ~ 3450 2000
-NoConn ~ 3450 2100
-NoConn ~ 3450 2200
-NoConn ~ 3450 2300
-NoConn ~ 3450 2400
-NoConn ~ 3450 2700
-NoConn ~ 3450 2900
-NoConn ~ 3450 3000
-NoConn ~ 3450 3100
-NoConn ~ 3450 3200
-NoConn ~ 3450 3300
-NoConn ~ 3450 3400
-NoConn ~ 3450 3500
-NoConn ~ 3450 3600
-NoConn ~ 1550 2900
-NoConn ~ 1550 3000
-NoConn ~ 1550 3100
-NoConn ~ 1550 3200
-NoConn ~ 1550 3300
-NoConn ~ 1550 3400
-NoConn ~ 1550 3500
-NoConn ~ 1550 3600
-NoConn ~ 1550 3700
-NoConn ~ 1550 3800
-NoConn ~ 1550 3900
-NoConn ~ 1550 4000
-NoConn ~ 1550 4100
-NoConn ~ 1550 4200
-NoConn ~ 1550 4300
-NoConn ~ 1550 4400
-NoConn ~ 3450 3700
-NoConn ~ 3450 3800
-NoConn ~ 3450 3900
-NoConn ~ 1550 2600
-NoConn ~ 1550 2700
-NoConn ~ 3450 4300
-NoConn ~ 3450 4400
-NoConn ~ 3450 4600
-NoConn ~ 3450 4700
-NoConn ~ 3450 4800
-NoConn ~ 3450 4900
-NoConn ~ 3450 5200
-NoConn ~ 3450 5300
-NoConn ~ 3450 5900
-NoConn ~ 3450 6000
-NoConn ~ 3450 6100
+NoConn ~ 3150 1050
+NoConn ~ 3150 1350
+NoConn ~ 3150 1450
+NoConn ~ 3150 1550
+NoConn ~ 3150 1650
+NoConn ~ 3150 1850
+NoConn ~ 3150 1950
+NoConn ~ 3150 2050
+NoConn ~ 3150 2150
+NoConn ~ 3150 2250
+NoConn ~ 3150 2550
+NoConn ~ 3150 2750
+NoConn ~ 3150 2850
+NoConn ~ 3150 2950
+NoConn ~ 3150 3050
+NoConn ~ 3150 3150
+NoConn ~ 3150 3250
+NoConn ~ 3150 3350
+NoConn ~ 3150 3450
+NoConn ~ 1250 2750
+NoConn ~ 1250 2850
+NoConn ~ 1250 2950
+NoConn ~ 1250 3050
+NoConn ~ 1250 3150
+NoConn ~ 1250 3250
+NoConn ~ 1250 3350
+NoConn ~ 1250 3450
+NoConn ~ 1250 3550
+NoConn ~ 1250 3650
+NoConn ~ 1250 3750
+NoConn ~ 1250 3850
+NoConn ~ 1250 3950
+NoConn ~ 1250 4050
+NoConn ~ 1250 4150
+NoConn ~ 1250 4250
+NoConn ~ 3150 3550
+NoConn ~ 3150 3650
+NoConn ~ 3150 3750
+NoConn ~ 1250 2450
+NoConn ~ 1250 2550
+NoConn ~ 3150 4150
+NoConn ~ 3150 4250
+NoConn ~ 3150 4450
+NoConn ~ 3150 4650
+NoConn ~ 3150 4750
+NoConn ~ 3150 5050
+NoConn ~ 3150 5150
+NoConn ~ 3150 5750
+NoConn ~ 3150 5850
+NoConn ~ 3150 5950
 $Comp
 L Device:C_Small C2
 U 1 1 5E920E0D
-P 1450 1800
-F 0 "C2" V 1679 1800 50  0000 C CNN
-F 1 "0.1uF" V 1588 1800 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1450 1800 50  0001 C CNN
-F 3 "~" H 1450 1800 50  0001 C CNN
-	1    1450 1800
+P 1150 1650
+F 0 "C2" V 1379 1650 50  0000 C CNN
+F 1 "0.1uF" V 1288 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1150 1650 50  0001 C CNN
+F 3 "~" H 1150 1650 50  0001 C CNN
+	1    1150 1650
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 5E922318
-P 1150 1900
-F 0 "C1" V 921 1900 50  0000 C CNN
-F 1 "22uF" V 1012 1900 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1150 1900 50  0001 C CNN
-F 3 "~" H 1150 1900 50  0001 C CNN
-	1    1150 1900
+P 850 1750
+F 0 "C1" V 621 1750 50  0000 C CNN
+F 1 "22uF" V 712 1750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 850 1750 50  0001 C CNN
+F 3 "~" H 850 1750 50  0001 C CNN
+	1    850  1750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1250 1900 1550 1900
-Text GLabel 1050 1900 0    50   Input ~ 0
+	950  1750 1250 1750
+Text GLabel 750  1750 0    50   Input ~ 0
 GND
-Text GLabel 1350 1800 0    50   Input ~ 0
+Text GLabel 1050 1650 0    50   Input ~ 0
 GND
-Text GLabel 1550 1300 0    50   Input ~ 0
+Text GLabel 1250 1150 0    50   Input ~ 0
 GND
-Text GLabel 1550 1400 0    50   Input ~ 0
+Text GLabel 1250 1250 0    50   Input ~ 0
 3V3
-NoConn ~ 1550 1200
-Text GLabel 1550 1600 0    50   Input ~ 0
+NoConn ~ 1250 1050
+Text GLabel 1250 1450 0    50   Input ~ 0
 GND
 $Comp
 L power:+3.3V #PWR0101
@@ -990,7 +984,6 @@ Text GLabel 1100 7400 0    50   Input ~ 0
 5V
 Wire Wire Line
 	6350 2800 6350 2900
-NoConn ~ 4350 5100
 Wire Wire Line
 	3800 3000 4150 3000
 Wire Wire Line
@@ -1008,34 +1001,34 @@ F 3 "~" H 1100 7400 50  0001 C CNN
 	1    1100 7400
 	0    1    1    0   
 $EndComp
-Connection ~ 2850 900 
+Connection ~ 2550 750 
 Wire Wire Line
-	2850 900  2950 900 
+	2550 750  2650 750 
 Wire Wire Line
-	2750 900  2850 900 
-Connection ~ 2750 900 
-Connection ~ 2650 900 
+	2450 750  2550 750 
+Connection ~ 2450 750 
+Connection ~ 2350 750 
 Wire Wire Line
-	2650 900  2750 900 
+	2350 750  2450 750 
 Wire Wire Line
-	2550 900  2650 900 
-Connection ~ 2550 900 
-Connection ~ 2450 900 
+	2250 750  2350 750 
+Connection ~ 2250 750 
+Connection ~ 2150 750 
 Wire Wire Line
-	2450 900  2550 900 
+	2150 750  2250 750 
 Wire Wire Line
-	2350 900  2450 900 
-Connection ~ 2750 6400
-Connection ~ 2650 6400
+	2050 750  2150 750 
+Connection ~ 2450 6250
+Connection ~ 2350 6250
 Wire Wire Line
-	2650 6400 2550 6400
+	2350 6250 2250 6250
 Wire Wire Line
-	2550 6400 2450 6400
-Connection ~ 2550 6400
+	2250 6250 2150 6250
+Connection ~ 2250 6250
 Wire Wire Line
-	2750 6400 2650 6400
+	2450 6250 2350 6250
 Wire Wire Line
-	2850 6400 2750 6400
+	2550 6250 2450 6250
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5E99F395
@@ -1063,12 +1056,12 @@ GND
 $Comp
 L MCU_ST_STM32F7:STM32F745VEHx U1
 U 1 1 5E8AC8A3
-P 2550 3600
-F 0 "U1" H 2500 711 50  0000 C CNN
-F 1 "STM32F745VEHx" H 2500 620 50  0000 C CNN
-F 2 "Package_BGA:TFBGA-100_8x8mm_Layout10x10_P0.8mm" H 1750 1000 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00166116.pdf" H 2550 3600 50  0001 C CNN
-	1    2550 3600
+P 2250 3450
+F 0 "U1" H 2200 561 50  0000 C CNN
+F 1 "STM32F745VEHx" H 2200 470 50  0000 C CNN
+F 2 "Package_BGA:TFBGA-100_8x8mm_Layout10x10_P0.8mm" H 1450 850 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00166116.pdf" H 2250 3450 50  0001 C CNN
+	1    2250 3450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1109,26 +1102,26 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG0106
 U 1 1 5E9C405C
-P 1550 1900
-F 0 "#FLG0106" H 1550 1975 50  0001 C CNN
-F 1 "PWR_FLAG" H 1550 2073 50  0000 C CNN
-F 2 "" H 1550 1900 50  0001 C CNN
-F 3 "~" H 1550 1900 50  0001 C CNN
-	1    1550 1900
+P 1250 1750
+F 0 "#FLG0106" H 1250 1825 50  0001 C CNN
+F 1 "PWR_FLAG" H 1250 1923 50  0000 C CNN
+F 2 "" H 1250 1750 50  0001 C CNN
+F 3 "~" H 1250 1750 50  0001 C CNN
+	1    1250 1750
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0107
 U 1 1 5E9C80F2
-P 1550 1800
-F 0 "#FLG0107" H 1550 1875 50  0001 C CNN
-F 1 "PWR_FLAG" H 1550 1973 50  0000 C CNN
-F 2 "" H 1550 1800 50  0001 C CNN
-F 3 "~" H 1550 1800 50  0001 C CNN
-	1    1550 1800
+P 1250 1650
+F 0 "#FLG0107" H 1250 1725 50  0001 C CNN
+F 1 "PWR_FLAG" H 1250 1823 50  0000 C CNN
+F 2 "" H 1250 1650 50  0001 C CNN
+F 3 "~" H 1250 1650 50  0001 C CNN
+	1    1250 1650
 	1    0    0    -1  
 $EndComp
-Connection ~ 1550 1900
+Connection ~ 1250 1750
 NoConn ~ 9800 5200
 NoConn ~ 9800 5300
 NoConn ~ 9800 3450
@@ -1358,9 +1351,9 @@ F 3 "~" H 9050 2000 50  0001 C CNN
 	1    9050 2000
 	1    0    0    -1  
 $EndComp
-Text GLabel 3450 2500 2    50   Input ~ 0
+Text GLabel 3150 2350 2    50   Input ~ 0
 SWDIO
-Text GLabel 3450 2600 2    50   Input ~ 0
+Text GLabel 3150 2450 2    50   Input ~ 0
 SWCLK
 $Comp
 L Connector:Conn_01x04_Male J13
@@ -1392,4 +1385,43 @@ F 3 "~" H 8050 2150 50  0001 C CNN
 	1    8050 2150
 	0    1    1    0   
 $EndComp
+Text GLabel 3150 1250 2    50   Input ~ 0
+MDIO
+Text GLabel 3150 4550 2    50   Input ~ 0
+MDC
+Text GLabel 4150 4900 1    50   Input ~ 0
+3V3
+$Comp
+L Device:R_Small_US R17
+U 1 1 5E89FA05
+P 4250 4900
+F 0 "R17" V 4045 4900 50  0000 C CNN
+F 1 "4.7kΩ" V 4136 4900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4250 4900 50  0001 C CNN
+F 3 "~" H 4250 4900 50  0001 C CNN
+	1    4250 4900
+	0    1    1    0   
+$EndComp
+NoConn ~ 4350 5000
+Text GLabel 3950 5100 3    50   Input ~ 0
+MDIO
+Text GLabel 4350 5200 0    50   Input ~ 0
+MDC
+Text GLabel 3950 4900 1    50   Input ~ 0
+3V3
+$Comp
+L Device:R_Small_US R16
+U 1 1 5E8AAD33
+P 3950 5000
+F 0 "R16" V 3745 5000 50  0000 C CNN
+F 1 "4.7kΩ" V 3836 5000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3950 5000 50  0001 C CNN
+F 3 "~" H 3950 5000 50  0001 C CNN
+	1    3950 5000
+	-1   0    0    1   
+$EndComp
+Connection ~ 1250 1650
+Wire Wire Line
+	3950 5100 4350 5100
+NoConn ~ 4350 5500
 $EndSCHEMATC
