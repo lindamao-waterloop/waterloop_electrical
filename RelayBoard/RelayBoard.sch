@@ -1131,12 +1131,12 @@ may need \n75ohm to cap
 Text GLabel 6350 3900 2    50   Input ~ 0
 RX2-
 $Comp
-L Device:C_Small C21
+L Device:CP1_Small C21
 U 1 1 5E84FFB9
 P 7100 2700
 F 0 "C21" H 7192 2746 50  0000 L CNN
-F 1 "100uF" H 7192 2655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7100 2700 50  0001 C CNN
+F 1 "470uF EMZS350ARA471MHA0G" H 7192 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10" H 7100 2700 50  0001 C CNN
 F 3 "~" H 7100 2700 50  0001 C CNN
 	1    7100 2700
 	1    0    0    -1  
@@ -1163,35 +1163,23 @@ Text GLabel 7100 2600 0    50   Input ~ 0
 Text GLabel 7100 2800 3    50   Input ~ 0
 GND
 $Comp
-L Diode:1N5822 D2
-U 1 1 5E8672B7
-P 8300 2950
-F 0 "D2" V 8254 3029 50  0000 L CNN
-F 1 "1N5822" V 8345 3029 50  0000 L CNN
-F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 8300 2775 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 8300 2950 50  0001 C CNN
-	1    8300 2950
-	0    1    1    0   
-$EndComp
-Connection ~ 8300 2800
-$Comp
 L Device:L L1
 U 1 1 5E8687D9
 P 8450 2800
 F 0 "L1" V 8640 2800 50  0000 C CNN
-F 1 "330uH" V 8549 2800 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8450 2800 50  0001 C CNN
+F 1 "330uH PA4320" V 8549 2800 50  0000 C CNN
+F 2 "Inductor_SMD:L_Pulse_PA4320" H 8450 2800 50  0001 C CNN
 F 3 "~" H 8450 2800 50  0001 C CNN
 	1    8450 2800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C_Small C22
+L Device:CP1_Small C22
 U 1 1 5E86EE8D
 P 8600 2900
 F 0 "C22" H 8692 2946 50  0000 L CNN
-F 1 "330uF" H 8692 2855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8600 2900 50  0001 C CNN
+F 1 "330uF EMZS350ARA331MHA0G" H 8692 2855 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10" H 8600 2900 50  0001 C CNN
 F 3 "~" H 8600 2900 50  0001 C CNN
 	1    8600 2900
 	1    0    0    -1  
@@ -1205,8 +1193,6 @@ Text GLabel 8300 3100 3    50   Input ~ 0
 GND
 Text GLabel 8600 3000 3    50   Input ~ 0
 GND
-Text GLabel 8600 2800 2    50   Input ~ 0
-5V
 Text GLabel 7850 2150 0    50   Input ~ 0
 5V_CAN
 Text GLabel 1650 6900 0    50   Input ~ 0
@@ -1434,5 +1420,43 @@ F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8250 1950 50  0001 L
 F 3 "~" H 8200 2150 50  0001 C CNN
 	1    8200 2150
 	0    1    1    0   
+$EndComp
+Text GLabel 8900 2800 2    50   Input ~ 0
+5V
+$Comp
+L Device:L L2
+U 1 1 5EA957DB
+P 8750 2800
+F 0 "L2" V 8940 2800 50  0000 C CNN
+F 1 "22uH PA4320" V 8849 2800 50  0000 C CNN
+F 2 "Inductor_SMD:L_Pulse_PA4320" H 8750 2800 50  0001 C CNN
+F 3 "~" H 8750 2800 50  0001 C CNN
+	1    8750 2800
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8900 3000 3    50   Input ~ 0
+GND
+$Comp
+L Device:D_Schottky D2
+U 1 1 5EA9FF6A
+P 8300 2950
+F 0 "D2" V 8254 3029 50  0000 L CNN
+F 1 "CCS15F40L3FTR-ND" V 8345 3029 50  0000 L CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8300 2950 50  0001 C CNN
+F 3 "~" H 8300 2950 50  0001 C CNN
+	1    8300 2950
+	0    1    1    0   
+$EndComp
+Connection ~ 8300 2800
+$Comp
+L Device:CP1_Small C23
+U 1 1 5EA957E1
+P 8900 2900
+F 0 "C23" H 8992 2946 50  0000 L CNN
+F 1 "470uF EMZS350ARA471MHA0G" H 8992 2855 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10" H 8900 2900 50  0001 C CNN
+F 3 "~" H 8900 2900 50  0001 C CNN
+	1    8900 2900
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
