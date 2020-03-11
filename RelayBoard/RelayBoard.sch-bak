@@ -1130,70 +1130,7 @@ Text Notes 9900 3550 0    50   ~ 0
 may need \n75ohm to cap
 Text GLabel 6350 3900 2    50   Input ~ 0
 RX2-
-$Comp
-L Device:CP1_Small C21
-U 1 1 5E84FFB9
-P 7100 2700
-F 0 "C21" H 7192 2746 50  0000 L CNN
-F 1 "470uF EMZS350ARA471MHA0G" H 7192 2655 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_10x10" H 7100 2700 50  0001 C CNN
-F 3 "~" H 7100 2700 50  0001 C CNN
-	1    7100 2700
-	1    0    0    -1  
-$EndComp
-Text GLabel 7800 3000 3    50   Input ~ 0
-GND
-$Comp
-L Regulator_Switching:LM2575-5.0BU U5
-U 1 1 5E84DD3F
-P 7800 2700
-F 0 "U5" H 7800 3067 50  0000 C CNN
-F 1 "LM2575-5.0BU" H 7800 2976 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 7800 2450 50  0001 L CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf" H 7800 2700 50  0001 C CNN
-	1    7800 2700
-	1    0    0    -1  
-$EndComp
-Text GLabel 7300 2800 3    50   Input ~ 0
-GND
-Wire Wire Line
-	7100 2600 7300 2600
-Text GLabel 7100 2600 0    50   Input ~ 0
-24V
-Text GLabel 7100 2800 3    50   Input ~ 0
-GND
-$Comp
-L Device:L L1
-U 1 1 5E8687D9
-P 8450 2800
-F 0 "L1" V 8640 2800 50  0000 C CNN
-F 1 "330uH PA4320" V 8549 2800 50  0000 C CNN
-F 2 "Inductor_SMD:L_Pulse_PA4320" H 8450 2800 50  0001 C CNN
-F 3 "~" H 8450 2800 50  0001 C CNN
-	1    8450 2800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:CP1_Small C22
-U 1 1 5E86EE8D
-P 8600 2900
-F 0 "C22" H 8692 2946 50  0000 L CNN
-F 1 "330uF EMZS350ARA331MHA0G" H 8692 2855 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_10x10" H 8600 2900 50  0001 C CNN
-F 3 "~" H 8600 2900 50  0001 C CNN
-	1    8600 2900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8300 2600 8600 2600
-Wire Wire Line
-	8600 2600 8600 2800
-Connection ~ 8600 2800
-Text GLabel 8300 3100 3    50   Input ~ 0
-GND
-Text GLabel 8600 3000 3    50   Input ~ 0
-GND
-Text GLabel 7850 2150 0    50   Input ~ 0
+Text GLabel 7650 2200 0    50   Input ~ 0
 5V_CAN
 Text GLabel 1650 6900 0    50   Input ~ 0
 24V
@@ -1358,17 +1295,6 @@ Text GLabel 6600 2050 1    50   Input ~ 0
 SWCLK
 Text GLabel 6700 2050 1    50   Input ~ 0
 GND
-$Comp
-L Device:R_Small_US R15
-U 1 1 5E863A07
-P 7950 2150
-F 0 "R15" V 7745 2150 50  0000 C CNN
-F 1 "0Ω" V 7836 2150 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7950 2150 50  0001 C CNN
-F 3 "~" H 7950 2150 50  0001 C CNN
-	1    7950 2150
-	0    1    1    0   
-$EndComp
 Text GLabel 3150 1250 2    50   Input ~ 0
 MDIO
 Text GLabel 3150 4550 2    50   Input ~ 0
@@ -1408,55 +1334,19 @@ Connection ~ 1250 1650
 Wire Wire Line
 	3950 5100 4350 5100
 NoConn ~ 4350 5500
-Text GLabel 8350 2150 2    50   Input ~ 0
+Text GLabel 7650 2200 2    50   Input ~ 0
 5V
-$Comp
-L Device:Polyfuse F1
-U 1 1 5EA76ED7
-P 8200 2150
-F 0 "F1" V 7975 2150 50  0000 C CNN
-F 1 "1A" V 8066 2150 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8250 1950 50  0001 L CNN
-F 3 "~" H 8200 2150 50  0001 C CNN
-	1    8200 2150
-	0    1    1    0   
-$EndComp
-Text GLabel 8900 2800 2    50   Input ~ 0
-5V
-$Comp
-L Device:L L2
-U 1 1 5EA957DB
-P 8750 2800
-F 0 "L2" V 8940 2800 50  0000 C CNN
-F 1 "22uH AISC-0603F-220J-T" V 8849 2800 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8750 2800 50  0001 C CNN
-F 3 "~" H 8750 2800 50  0001 C CNN
-	1    8750 2800
-	0    -1   -1   0   
-$EndComp
-Text GLabel 8900 3000 3    50   Input ~ 0
+Text GLabel 7650 2400 2    50   Input ~ 0
 GND
-$Comp
-L Device:D_Schottky D2
-U 1 1 5EA9FF6A
-P 8300 2950
-F 0 "D2" V 8254 3029 50  0000 L CNN
-F 1 "CCS15F40L3FTR-ND" V 8345 3029 50  0000 L CNN
-F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8300 2950 50  0001 C CNN
-F 3 "~" H 8300 2950 50  0001 C CNN
-	1    8300 2950
-	0    1    1    0   
-$EndComp
-Connection ~ 8300 2800
 $Comp
 L Device:CP1_Small C23
 U 1 1 5EA957E1
-P 8900 2900
-F 0 "C23" H 8992 2946 50  0000 L CNN
-F 1 "470uF EMZS350ARA471MHA0G" H 8992 2855 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_10x10" H 8900 2900 50  0001 C CNN
-F 3 "~" H 8900 2900 50  0001 C CNN
-	1    8900 2900
+P 7650 2300
+F 0 "C23" H 7742 2346 50  0000 L CNN
+F 1 "470uF EMZS350ARA471MHA0G" H 7742 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10" H 7650 2300 50  0001 C CNN
+F 3 "~" H 7650 2300 50  0001 C CNN
+	1    7650 2300
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
