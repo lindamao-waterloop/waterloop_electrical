@@ -68,13 +68,13 @@ $EndComp
 $Comp
 L Device:R R1
 U 1 1 5E206CE8
-P 3950 3250
-F 0 "R1" V 3743 3250 50  0000 C CNN
-F 1 "10k" V 3834 3250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3880 3250 50  0001 C CNN
-F 3 "~" H 3950 3250 50  0001 C CNN
-	1    3950 3250
-	0    1    1    0   
+P 3700 3200
+F 0 "R1" V 3493 3200 50  0000 C CNN
+F 1 "10k" V 3584 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3630 3200 50  0001 C CNN
+F 3 "~" H 3700 3200 50  0001 C CNN
+	1    3700 3200
+	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:AVR-ISP-6 J1
@@ -94,8 +94,6 @@ Wire Wire Line
 Wire Wire Line
 	1900 3550 3700 3550
 Wire Wire Line
-	3650 3250 3650 3850
-Wire Wire Line
 	1900 4350 2550 4350
 Wire Wire Line
 	1900 4450 2250 4450
@@ -103,11 +101,6 @@ Wire Wire Line
 	2250 4450 2250 4700
 Wire Wire Line
 	2500 4250 2500 3850
-Wire Wire Line
-	3650 3250 3800 3250
-Connection ~ 3650 3850
-Wire Wire Line
-	3650 3850 3700 3850
 Wire Wire Line
 	2500 2100 2500 2650
 Text Notes 7400 7250 0    50   ~ 0
@@ -242,19 +235,16 @@ Connection ~ 4050 2700
 $Comp
 L power:+5V #PWR0111
 U 1 1 5E3265FD
-P 4200 3200
-F 0 "#PWR0111" H 4200 3050 50  0001 C CNN
-F 1 "+5V" H 4215 3373 50  0000 C CNN
-F 2 "" H 4200 3200 50  0001 C CNN
-F 3 "" H 4200 3200 50  0001 C CNN
-	1    4200 3200
+P 3700 3050
+F 0 "#PWR0111" H 3700 2900 50  0001 C CNN
+F 1 "+5V" H 3715 3223 50  0000 C CNN
+F 2 "" H 3700 3050 50  0001 C CNN
+F 3 "" H 3700 3050 50  0001 C CNN
+	1    3700 3050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 3250 4200 3250
-Wire Wire Line
 	4200 3200 4200 3250
-Connection ~ 4200 3250
 Wire Wire Line
 	2800 1250 2800 1350
 Wire Wire Line
@@ -442,8 +432,6 @@ Wire Wire Line
 Connection ~ 3800 950 
 Wire Wire Line
 	3800 950  4000 950 
-Wire Wire Line
-	2500 3850 3650 3850
 $Comp
 L power:Earth #PWR0114
 U 1 1 5E35CF46
@@ -472,7 +460,7 @@ L Device:C C6
 U 1 1 5E2097DA
 P 2550 4850
 F 0 "C6" H 2665 4896 50  0000 L CNN
-F 1 "20p" H 2665 4805 50  0000 L CNN
+F 1 "10p" H 2665 4805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2588 4700 50  0001 C CNN
 F 3 "~" H 2550 4850 50  0001 C CNN
 	1    2550 4850
@@ -484,7 +472,7 @@ L Device:C C5
 U 1 1 5E20A4E1
 P 2250 4850
 F 0 "C5" H 2365 4896 50  0000 L CNN
-F 1 "20p" H 2365 4805 50  0000 L CNN
+F 1 "10p" H 2365 4805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2288 4700 50  0001 C CNN
 F 3 "~" H 2250 4850 50  0001 C CNN
 	1    2250 4850
@@ -520,31 +508,18 @@ Text GLabel 6000 2300 0    50   Input ~ 0
 CANH
 Text GLabel 6000 2400 0    50   Input ~ 0
 CANL
-$Comp
-L Device:R R2
-U 1 1 5E2D33A5
-P 4800 2300
-F 0 "R2" H 4870 2346 50  0000 L CNN
-F 1 "120" H 4870 2255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4730 2300 50  0001 C CNN
-F 3 "~" H 4800 2300 50  0001 C CNN
-	1    4800 2300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4550 2400 4550 2450
 Wire Wire Line
 	4550 2450 4800 2450
 Wire Wire Line
 	4800 2550 4800 2450
-Connection ~ 4800 2450
 Wire Wire Line
 	4550 2200 4550 2150
 Wire Wire Line
 	4550 2150 4800 2150
 Wire Wire Line
 	4800 2050 4800 2150
-Connection ~ 4800 2150
 Wire Wire Line
 	4050 1650 4050 1800
 $Comp
@@ -665,4 +640,11 @@ F 3 "~" H 2500 950 50  0001 C CNN
 	1    2500 950 
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2500 3850 3700 3850
+Connection ~ 3700 3850
+Wire Wire Line
+	3700 3350 3700 3850
+Text GLabel 4200 3200 1    50   Input ~ 0
+UIN
 $EndSCHEMATC
