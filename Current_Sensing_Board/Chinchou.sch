@@ -37,16 +37,8 @@ F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 5050 700 50  000
 $EndComp
 Text GLabel 6000 2100 0    50   Input ~ 0
 UIN
-Text GLabel 6000 2300 0    50   Input ~ 0
-CANH
-Wire Wire Line
-	6000 2300 6200 2300
 Wire Wire Line
 	6000 2100 6200 2100
-Text GLabel 6000 2400 0    50   Input ~ 0
-CANL
-Wire Wire Line
-	6000 2400 6200 2400
 Text GLabel 4650 950  0    50   Input ~ 0
 UIN
 Wire Wire Line
@@ -64,9 +56,9 @@ F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 4050 2300 50  0001 C
 	1    4050 2300
 	1    0    0    -1  
 $EndComp
-Text GLabel 4600 2400 2    50   Input ~ 0
+Text GLabel 4800 2550 2    50   Input ~ 0
 CANL
-Text GLabel 4600 2200 2    50   Input ~ 0
+Text GLabel 4800 2050 2    50   Input ~ 0
 CANH
 Wire Wire Line
 	3550 2700 4050 2700
@@ -102,7 +94,7 @@ U 1 1 5E1F8DCB
 P 4100 3750
 F 0 "J1" H 4400 3400 50  0000 R CNN
 F 1 "ISP-6" H 4400 3300 50  0000 R CNN
-F 2 "" V 3850 3800 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 3850 3800 50  0001 C CNN
 F 3 " ~" H 2825 3200 50  0001 C CNN
 	1    4100 3750
 	-1   0    0    -1  
@@ -141,10 +133,6 @@ Wire Wire Line
 	3650 3850 3700 3850
 Wire Wire Line
 	2500 2100 2500 2650
-Wire Wire Line
-	4600 2200 4550 2200
-Wire Wire Line
-	4600 2400 4550 2400
 Text Notes 7400 7250 0    50   ~ 0
 lindamao-waterloop/waterloop_electrical
 Text Notes 10550 7650 0    50   ~ 0
@@ -330,16 +318,14 @@ $EndComp
 $Comp
 L power:+5V #PWR0110
 U 1 1 5E318090
-P 4050 1850
-F 0 "#PWR0110" H 4050 1700 50  0001 C CNN
-F 1 "+5V" H 4065 2023 50  0000 C CNN
-F 2 "" H 4050 1850 50  0001 C CNN
-F 3 "" H 4050 1850 50  0001 C CNN
-	1    4050 1850
+P 4050 1650
+F 0 "#PWR0110" H 4050 1500 50  0001 C CNN
+F 1 "+5V" H 4150 1700 50  0000 C CNN
+F 2 "" H 4050 1650 50  0001 C CNN
+F 3 "" H 4050 1650 50  0001 C CNN
+	1    4050 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4050 1900 4050 1850
 Wire Wire Line
 	4050 2750 4050 2700
 Connection ~ 4050 2700
@@ -646,17 +632,6 @@ Wire Wire Line
 Wire Wire Line
 	2500 3850 3650 3850
 $Comp
-L Connector:Conn_01x04_Male J2
-U 1 1 5E2C44CB
-P 6400 2200
-F 0 "J2" H 6500 1900 50  0000 R CNN
-F 1 "Conn_01x04_Male" H 6372 2173 50  0001 R CNN
-F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 6400 2200 50  0001 C CNN
-F 3 "~" H 6400 2200 50  0001 C CNN
-	1    6400 2200
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:Earth #PWR0114
 U 1 1 5E35CF46
 P 2400 5150
@@ -712,5 +687,189 @@ F 2 "Crystal:Crystal_SMD_MicroCrystal_CC8V-T1A-2Pin_2.0x1.2mm" H 2400 4700 50  0
 F 3 "~" H 2400 4700 50  0001 C CNN
 	1    2400 4700
 	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5E2C44CB
+P 6400 2200
+F 0 "J2" H 6500 1900 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 6372 2173 50  0001 R CNN
+F 2 "Connector_JST:JST_XH_S4B-XH-A-1_1x04_P2.50mm_Horizontal" H 6400 2200 50  0001 C CNN
+F 3 "~" H 6400 2200 50  0001 C CNN
+	1    6400 2200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2400 6200 2400
+Wire Wire Line
+	6000 2300 6200 2300
+Text GLabel 6000 2300 0    50   Input ~ 0
+CANH
+Text GLabel 6000 2400 0    50   Input ~ 0
+CANL
+$Comp
+L Device:R R2
+U 1 1 5E2D33A5
+P 4800 2300
+F 0 "R2" H 4870 2346 50  0000 L CNN
+F 1 "120" H 4870 2255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4730 2300 50  0001 C CNN
+F 3 "~" H 4800 2300 50  0001 C CNN
+	1    4800 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2400 4550 2450
+Wire Wire Line
+	4550 2450 4800 2450
+Wire Wire Line
+	4800 2550 4800 2450
+Connection ~ 4800 2450
+Wire Wire Line
+	4550 2200 4550 2150
+Wire Wire Line
+	4550 2150 4800 2150
+Wire Wire Line
+	4800 2050 4800 2150
+Connection ~ 4800 2150
+Wire Wire Line
+	4050 1650 4050 1800
+$Comp
+L Device:C C9
+U 1 1 5E352D2F
+P 4300 1800
+F 0 "C9" V 4450 1750 50  0000 L CNN
+F 1 "100n" V 4450 1550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4338 1650 50  0001 C CNN
+F 3 "~" H 4300 1800 50  0001 C CNN
+	1    4300 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0115
+U 1 1 5E352D35
+P 4550 1800
+F 0 "#PWR0115" H 4550 1550 50  0001 C CNN
+F 1 "Earth" H 4550 1650 50  0001 C CNN
+F 2 "" H 4550 1800 50  0001 C CNN
+F 3 "~" H 4550 1800 50  0001 C CNN
+	1    4550 1800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4450 1800 4550 1800
+Wire Wire Line
+	4150 1800 4050 1800
+Connection ~ 4050 1800
+Wire Wire Line
+	4050 1800 4050 1900
+$Comp
+L Sensor_Current:TSC888 U5
+U 1 1 5E3642B1
+P 5850 3500
+F 0 "U5" H 5850 3765 50  0000 C CNN
+F 1 "TSC888" H 5850 3674 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 5850 3350 50  0001 C CNN
+F 3 "" H 5850 3350 50  0001 C CNN
+	1    5850 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0120
+U 1 1 5E36509B
+P 6200 3500
+F 0 "#PWR0120" H 6200 3350 50  0001 C CNN
+F 1 "+5V" H 6215 3673 50  0000 C CNN
+F 2 "" H 6200 3500 50  0001 C CNN
+F 3 "" H 6200 3500 50  0001 C CNN
+	1    6200 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0121
+U 1 1 5E365CA6
+P 5500 3750
+F 0 "#PWR0121" H 5500 3500 50  0001 C CNN
+F 1 "Earth" H 5500 3600 50  0001 C CNN
+F 2 "" H 5500 3750 50  0001 C CNN
+F 3 "~" H 5500 3750 50  0001 C CNN
+	1    5500 3750
+	0    1    1    0   
+$EndComp
+Text GLabel 5500 3500 0    50   Input ~ 0
+TSCout
+Text GLabel 2150 3850 3    50   Input ~ 0
+TSCout
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 5E36A31B
+P 6400 4450
+F 0 "J4" H 6480 4492 50  0000 L CNN
+F 1 "Conn_01x01" H 6480 4401 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6400 4450 50  0001 C CNN
+F 3 "~" H 6400 4450 50  0001 C CNN
+	1    6400 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4450 6200 4450
+Wire Wire Line
+	5450 4450 5500 4450
+Wire Wire Line
+	6200 4000 6200 4450
+Connection ~ 6200 4450
+Wire Wire Line
+	5500 4000 5500 4450
+Connection ~ 5500 4450
+Wire Wire Line
+	5500 4450 5700 4450
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5E369A45
+P 5250 4450
+F 0 "J3" H 5400 4400 50  0000 C CNN
+F 1 "Conn_01x01" H 5550 4500 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5250 4450 50  0001 C CNN
+F 3 "~" H 5250 4450 50  0001 C CNN
+	1    5250 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E36865D
+P 5850 4450
+F 0 "R3" V 5643 4450 50  0000 C CNN
+F 1 "50 m" V 5734 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 5780 4450 50  0001 C CNN
+F 3 "~" H 5850 4450 50  0001 C CNN
+	1    5850 4450
+	0    1    1    0   
+$EndComp
+NoConn ~ 700  1550
+NoConn ~ 1900 1750
+NoConn ~ 1900 1850
+NoConn ~ 1900 1950
+NoConn ~ 1900 2050
+NoConn ~ 1900 2150
+NoConn ~ 1900 2450
+NoConn ~ 1900 2550
+NoConn ~ 1900 3050
+NoConn ~ 1900 3150
+NoConn ~ 1900 3350
+NoConn ~ 1900 3450
+NoConn ~ 1900 3950
+NoConn ~ 1900 4050
+Text GLabel 6600 2050 1    50   Input ~ 0
+UIN
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E3966E4
+P 6600 2050
+F 0 "#FLG0101" H 6600 2125 50  0001 C CNN
+F 1 "PWR_FLAG" H 6600 2223 50  0000 C CNN
+F 2 "" H 6600 2050 50  0001 C CNN
+F 3 "~" H 6600 2050 50  0001 C CNN
+	1    6600 2050
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC

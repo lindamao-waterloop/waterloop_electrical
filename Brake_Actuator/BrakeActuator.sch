@@ -277,17 +277,6 @@ F 3 "~" H 3550 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:Earth #PWR0108
-U 1 1 5E305593
-P 4000 1350
-F 0 "#PWR0108" H 4000 1100 50  0001 C CNN
-F 1 "Earth" H 4000 1200 50  0001 C CNN
-F 2 "" H 4000 1350 50  0001 C CNN
-F 3 "~" H 4000 1350 50  0001 C CNN
-	1    4000 1350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:Earth #PWR0109
 U 1 1 5E315CB9
 P 4050 2750
@@ -318,8 +307,6 @@ Wire Wire Line
 	2800 1250 2800 1350
 Wire Wire Line
 	3550 1250 3550 1350
-Wire Wire Line
-	4000 1250 4000 1350
 Wire Wire Line
 	4950 1250 4950 1350
 Wire Wire Line
@@ -666,17 +653,6 @@ F 3 "~" H 7750 2150 50  0001 C CNN
 	1    7750 2150
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transistor_FET:BSC082N10LSG Q1
-U 1 1 5E2F9E9C
-P 7650 2900
-F 0 "Q1" H 7854 2946 50  0000 L CNN
-F 1 "STP55NF06L" H 7854 2855 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 7850 2825 50  0001 L CIN
-F 3 "http://www.infineon.com/dgdl/Infineon-BSC082N10LS-DS-v01_07-en.pdf?fileId=db3a3043163797a6011647faad240719" V 7650 2900 50  0001 L CNN
-	1    7650 2900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7300 2900 7450 2900
 Text GLabel 6400 2900 0    50   Input ~ 0
@@ -687,17 +663,6 @@ Text GLabel 2200 3150 2    50   Input ~ 0
 OUT
 Wire Wire Line
 	1900 3150 2200 3150
-$Comp
-L Device:D D1
-U 1 1 5E3656F3
-P 7750 3600
-F 0 "D1" V 7704 3679 50  0000 L CNN
-F 1 "D" V 7795 3679 50  0000 L CNN
-F 2 "Diode_SMD:D_SMA" H 7750 3600 50  0001 C CNN
-F 3 "~" H 7750 3600 50  0001 C CNN
-	1    7750 3600
-	0    1    1    0   
-$EndComp
 $Comp
 L Connector:Conn_01x02_Male J3
 U 1 1 5E369256
@@ -722,39 +687,19 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x02_Male J4
 U 1 1 5E39CBE4
-P 9600 3650
-F 0 "J4" H 9572 3487 50  0000 R CNN
-F 1 "Brake" H 9572 3578 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 9572 3669 50  0000 R CNN
-F 3 "~" H 9600 3650 50  0001 C CNN
-	1    9600 3650
+P 9200 4450
+F 0 "J4" H 9172 4287 50  0000 R CNN
+F 1 "Brake" H 9172 4378 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 9172 4469 50  0000 R CNN
+F 3 "~" H 9200 4450 50  0001 C CNN
+	1    9200 4450
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:Earth #PWR0115
-U 1 1 5E39E252
-P 7750 4550
-F 0 "#PWR0115" H 7750 4300 50  0001 C CNN
-F 1 "Earth" H 7750 4400 50  0001 C CNN
-F 2 "" H 7750 4550 50  0001 C CNN
-F 3 "~" H 7750 4550 50  0001 C CNN
-	1    7750 4550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	7750 3100 7750 3300
+	8600 4350 9000 4350
 Wire Wire Line
-	9000 3550 9400 3550
-Wire Wire Line
-	9000 3650 9400 3650
-Text GLabel 8200 3300 2    50   Input ~ 0
-Brake+
-Wire Wire Line
-	8200 3300 7750 3300
-Connection ~ 7750 3300
-Wire Wire Line
-	7750 3300 7750 3450
-Text GLabel 9000 3550 0    50   Input ~ 0
+	8600 4450 9000 4450
+Text GLabel 8600 4350 0    50   Input ~ 0
 Brake+
 $Comp
 L power:Earth #PWR0120
@@ -769,21 +714,19 @@ F 3 "~" H 7150 1650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7150 1000 7150 1650
-Wire Wire Line
-	7750 3750 7750 4550
 $Comp
 L power:Earth #PWR0121
 U 1 1 5E4421D3
-P 9000 4450
-F 0 "#PWR0121" H 9000 4200 50  0001 C CNN
-F 1 "Earth" H 9000 4300 50  0001 C CNN
-F 2 "" H 9000 4450 50  0001 C CNN
-F 3 "~" H 9000 4450 50  0001 C CNN
-	1    9000 4450
+P 8600 5250
+F 0 "#PWR0121" H 8600 5000 50  0001 C CNN
+F 1 "Earth" H 8600 5100 50  0001 C CNN
+F 2 "" H 8600 5250 50  0001 C CNN
+F 3 "~" H 8600 5250 50  0001 C CNN
+	1    8600 5250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9000 3650 9000 4450
+	8600 4450 8600 5250
 $Comp
 L Device:R R4
 U 1 1 5E5AE2B2
@@ -867,10 +810,10 @@ Wire Wire Line
 Text GLabel 4200 3250 1    50   Input ~ 0
 UIN
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR0111
 U 1 1 5E5EB9CC
 P 3550 3100
-F 0 "#PWR?" H 3550 2950 50  0001 C CNN
+F 0 "#PWR0111" H 3550 2950 50  0001 C CNN
 F 1 "+5V" H 3565 3273 50  0000 C CNN
 F 2 "" H 3550 3100 50  0001 C CNN
 F 3 "" H 3550 3100 50  0001 C CNN
@@ -879,4 +822,125 @@ F 3 "" H 3550 3100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3550 3150 3550 3100
+Wire Wire Line
+	7750 4100 7750 4900
+Wire Wire Line
+	7750 3650 7750 3800
+Connection ~ 7750 3650
+Wire Wire Line
+	8200 3650 7750 3650
+Text GLabel 8200 3650 2    50   Input ~ 0
+Brake+
+$Comp
+L power:Earth #PWR0115
+U 1 1 5E39E252
+P 7750 4900
+F 0 "#PWR0115" H 7750 4650 50  0001 C CNN
+F 1 "Earth" H 7750 4750 50  0001 C CNN
+F 2 "" H 7750 4900 50  0001 C CNN
+F 3 "~" H 7750 4900 50  0001 C CNN
+	1    7750 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5E3656F3
+P 7750 3950
+F 0 "D1" V 7704 4029 50  0000 L CNN
+F 1 "D" V 7795 4029 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 7750 3950 50  0001 C CNN
+F 3 "~" H 7750 3950 50  0001 C CNN
+	1    7750 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:BSC082N10LSG Q1
+U 1 1 5E2F9E9C
+P 7650 2900
+F 0 "Q1" H 7854 2946 50  0000 L CNN
+F 1 "STP55NF06L" H 7854 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 7850 2825 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BSC082N10LS-DS-v01_07-en.pdf?fileId=db3a3043163797a6011647faad240719" V 7650 2900 50  0001 L CNN
+	1    7650 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E68B3A5
+P 7750 3300
+F 0 "R5" H 7820 3346 50  0000 L CNN
+F 1 "50 mili" H 7820 3255 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 7680 3300 50  0001 C CNN
+F 3 "~" H 7750 3300 50  0001 C CNN
+	1    7750 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3100 7750 3150
+$Comp
+L Chinchou-cache:Sensor_Current_TSC888 U5
+U 1 1 5E6A06AD
+P 9550 3200
+F 0 "U5" H 9550 3465 50  0000 C CNN
+F 1 "Sensor_Current_TSC888" H 9550 3374 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 9550 3050 50  0001 C CNN
+F 3 "" H 9550 3050 50  0001 C CNN
+	1    9550 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7750 3150 8500 3150
+Wire Wire Line
+	8500 3150 8500 2650
+Wire Wire Line
+	8500 2650 9050 2650
+Wire Wire Line
+	9050 2650 9050 2850
+Connection ~ 7750 3150
+Wire Wire Line
+	9050 3550 7750 3550
+Wire Wire Line
+	7750 3450 7750 3550
+Connection ~ 7750 3550
+Wire Wire Line
+	7750 3550 7750 3650
+Wire Wire Line
+	4000 1250 4000 1350
+$Comp
+L power:Earth #PWR0108
+U 1 1 5E305593
+P 4000 1350
+F 0 "#PWR0108" H 4000 1100 50  0001 C CNN
+F 1 "Earth" H 4000 1200 50  0001 C CNN
+F 2 "" H 4000 1350 50  0001 C CNN
+F 3 "~" H 4000 1350 50  0001 C CNN
+	1    4000 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0123
+U 1 1 5E6B1381
+P 9300 2850
+F 0 "#PWR0123" H 9300 2600 50  0001 C CNN
+F 1 "Earth" H 9300 2700 50  0001 C CNN
+F 2 "" H 9300 2850 50  0001 C CNN
+F 3 "~" H 9300 2850 50  0001 C CNN
+	1    9300 2850
+	-1   0    0    1   
+$EndComp
+Text GLabel 9550 2850 1    50   Input ~ 0
+TSCout
+Text GLabel 2150 3850 3    50   Input ~ 0
+TSCout
+$Comp
+L power:+5V #PWR0124
+U 1 1 5E6B88D5
+P 9550 3550
+F 0 "#PWR0124" H 9550 3400 50  0001 C CNN
+F 1 "+5V" H 9565 3723 50  0000 C CNN
+F 2 "" H 9550 3550 50  0001 C CNN
+F 3 "" H 9550 3550 50  0001 C CNN
+	1    9550 3550
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
