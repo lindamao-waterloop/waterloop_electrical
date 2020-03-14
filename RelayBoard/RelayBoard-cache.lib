@@ -27,62 +27,6 @@ X Pin_4 4 200 -200 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Micro_SD_Card
-#
-DEF Connector_Micro_SD_Card J 0 40 Y Y 1 F N
-F0 "J" -650 600 50 H V C CNN
-F1 "Connector_Micro_SD_Card" 650 600 50 H V R CNN
-F2 "" 1150 300 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- microSD*
-$ENDFPLIST
-DRAW
-S -300 -375 -200 -425 0 1 0 F
-S -300 -275 -200 -325 0 1 0 F
-S -300 -175 -200 -225 0 1 0 F
-S -300 -75 -200 -125 0 1 0 F
-S -300 25 -200 -25 0 1 0 F
-S -300 125 -200 75 0 1 0 F
-S -300 225 -200 175 0 1 0 F
-S -300 325 -200 275 0 1 0 F
-P 6 0 1 10 650 500 650 550 -750 550 -750 -650 650 -650 650 -450 N
-P 11 0 1 10 -350 -450 -350 350 -50 350 100 500 150 500 150 450 250 450 300 500 800 500 800 -450 -350 -450 f
-X DAT2 1 -900 300 150 R 50 50 1 1 B
-X DAT3/CD 2 -900 200 150 R 50 50 1 1 B
-X CMD 3 -900 100 150 R 50 50 1 1 I
-X VDD 4 -900 0 150 R 50 50 1 1 W
-X CLK 5 -900 -100 150 R 50 50 1 1 I
-X VSS 6 -900 -200 150 R 50 50 1 1 W
-X DAT0 7 -900 -300 150 R 50 50 1 1 B
-X DAT1 8 -900 -400 150 R 50 50 1 1 B
-X SHIELD 9 800 -600 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Screw_Terminal_01x02
-#
-DEF Connector_Screw_Terminal_01x02 J 0 40 Y N 1 F N
-F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Screw_Terminal_01x02" 0 -200 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- TerminalBlock*:*
-$ENDFPLIST
-DRAW
-C 0 -100 25 1 1 6 N
-C 0 0 25 1 1 6 N
-S -50 50 50 -150 1 1 10 f
-P 2 1 1 6 -21 -87 13 -120 N
-P 2 1 1 6 -21 13 13 -20 N
-P 2 1 1 6 -14 -80 20 -113 N
-P 2 1 1 6 -14 20 20 -13 N
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Device_CP1_Small
 #
 DEF Device_CP1_Small C 0 10 N N 1 F N
@@ -551,6 +495,26 @@ X Y_K Y_K 700 -300 200 L 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
+# SamacSys_Parts_1725656
+#
+DEF SamacSys_Parts_1725656 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "SamacSys_Parts_1725656" 650 200 50 H V L CNN
+F2 "1725656" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/1725656.pdf" 650 0 50 H I L CNN
+F4 "2 way PCB vertical mount terminal,2.54mm 2 way PCB vertical mount terminal,2.54mm" 650 -100 50 H I L CNN "Description"
+F5 "8" 650 -200 50 H I L CNN "Height"
+F6 "651-1725656" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=651-1725656" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Phoenix Contact" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "1725656" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -100 200 -100 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 B
+X 2 2 800 0 200 L 50 50 0 0 B
+ENDDRAW
+ENDDEF
+#
 # SamacSys_Parts_505004-0812
 #
 DEF SamacSys_Parts_505004-0812 J 0 30 Y Y 1 F N
@@ -578,6 +542,34 @@ X SIGNAL_1 S1 0 -400 200 R 50 50 0 0 U
 X SIGNAL_2 S2 0 -500 200 R 50 50 0 0 U
 X SIGNAL_3 S3 1500 0 200 L 50 50 0 0 U
 X SIGNAL_4 S4 1500 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_PJS008U-3000-0
+#
+DEF SamacSys_Parts_PJS008U-3000-0 J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "SamacSys_Parts_PJS008U-3000-0" 750 200 50 H V L CNN
+F2 "PJS008U30000" 750 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/PJS008U-3000-0.pdf" 750 0 50 H I L CNN
+F4 "Memory Card Connectors MicroSD Card Conn Ver Dip Mnt Manual" 750 -100 50 H I L CNN "Description"
+F5 "14.18" 750 -200 50 H I L CNN "Height"
+F6 "945-PJS008U-3000-0" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=945-PJS008U-3000-0" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Yamaichi" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "PJS008U-3000-0" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 700 100 700 -500 200 -500 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 0 -200 200 R 50 50 0 0 U
+X 4 4 0 -300 200 R 50 50 0 0 U
+X 5 5 0 -400 200 R 50 50 0 0 U
+X 6 6 900 0 200 L 50 50 0 0 U
+X 7 7 900 -100 200 L 50 50 0 0 U
+X 8 8 900 -200 200 L 50 50 0 0 U
+X MH1 MH1 900 -300 200 L 50 50 0 0 U
+X MH2 MH2 900 -400 200 L 50 50 0 0 U
 ENDDRAW
 ENDDEF
 #
