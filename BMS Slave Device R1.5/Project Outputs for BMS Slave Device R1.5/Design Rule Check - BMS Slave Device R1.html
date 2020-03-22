@@ -1,0 +1,452 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2020-03-22</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3:24:35 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc">C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">36</td></tr>
+</table>
+</td>
+</table><a name="IDAP2O5J2MJ3GIYFYC2VDZK2W5C4MT30DUXFXOPF514KFPUOPRY3E"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1TDW4GY15ODLLQHEOZ43OU2G5NVECLXHMVP2ANHQXU1PR0QDIC1D">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID35XDIUHE0FVOFL5J3QXHD1M5JPAMDLGMQ1KYXROWCKPN4OGAUNFH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXLC4Q1J53X0WJTFJXKGKL5XHD032DJZ33YIUQJLFHSPJMPS035B">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDF5X3ABTA1SIGZ0Z3PGM0MBFWNRZDVBIXVNZUYFVTAFZMGQRCJ2K">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDR1YLVH0QR2R3FSLOLLQ4WPTV5FODWNJKOFVBMPDPIZHSO2YDKLWG">Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJOLEOODF2LOHJZGFXEJVURLKSPHOEIQQAS2RDVIAPAPGJOKDEFQB">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRIZEBQGBGKTMFN2IIJ5QUDQIEPRKPFYKW1WAUW5J4KRK4BHFYSL">Minimum Annular Ring (Minimum=3mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIRUWGIKOJXYNKQH2BBTZ45FFWELPWDFKRGF1VLFLMSVXKL1CFVFK">Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQPRW0QSLRCH2KXZ5P4CFXKRSSCMZ3QJB00ZZFEMDLQUKTUCAG4KI">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTHO0WUAYSRT0EUOMESPVLFQXPL5MEDCV1GFGT2BKAIUW0WDHNBPK">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBURGSVIJC5DHWR0K4XWVZ2XE5XPCNDNYHNXPCEAUBISACKXG0E">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDROT0LZGKCTZEDC4INW03LL3CUHVWJSYALAIF12BYVVXOLOOJS3FF">Silk to Silk (Clearance=3.937mil) (All),(All)</a></td>
+<td class="column2">21</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLAFTANOBTLPTNLLRSKZN3O1LOFXNG2MIFTEFCDJ0LSEUBTYXHZO">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGMVBZHWTBGFHKI3FETLOVFLJPJ2VUTIEMJU2ULFDNPH5WGKFSTI">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFFWSXQ3XQTJAOBZCRQC2OZTGKMAM50NER5YNHEGU5OIIR2JHIY4G">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">36</td>
+</tr>
+</table><br><a name="IDTHO0WUAYSRT0EUOMESPVLFQXPL5MEDCV1GFGT2BKAIUW0WDHNBPK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2837.446mil|Location2.X=2842.633mil|Location1.Y=1632.603mil|Location2.Y=1637.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2837.446mil|Location2.X=2842.633mil|Location1.Y=1632.603mil|Location2.Y=1637.79mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad RN1-4(2857.756mil,1644.567mil) on Bottom Layer And Via (2822.323mil,1635.197mil) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.541mil|Location2.X=2695.291mil|Location1.Y=1540.317mil|Location2.Y=1549.816mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.541mil|Location2.X=2695.291mil|Location1.Y=1540.317mil|Location2.Y=1549.816mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.715mil &lt; 3.937mil) Between Pad U1-38(2656.811mil,1536.89mil) on Top Layer And Via (2707.43mil,1552.627mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2.715mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.139mil|Location2.X=2693.326mil|Location1.Y=1550.034mil|Location2.Y=1555.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.139mil|Location2.X=2693.326mil|Location1.Y=1550.034mil|Location2.Y=1555.22mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.773mil &lt; 3.937mil) Between Pad U1-39(2656.811mil,1556.575mil) on Top Layer And Via (2707.43mil,1552.627mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [1.773mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2280.812mil|Location2.X=2285.999mil|Location1.Y=1456.009mil|Location2.Y=1461.196mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2280.812mil|Location2.X=2285.999mil|Location1.Y=1456.009mil|Location2.Y=1461.196mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.733mil &lt; 3.937mil) Between Via (2280.905mil,1441.102mil) from Top Layer to Bottom Layer And Via (2285.905mil,1476.102mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [3.733mil] / [Bottom Solder] Mask Sliver [3.733mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2294.001mil|Location2.X=2300.736mil|Location1.Y=1430.424mil|Location2.Y=1439.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2294.001mil|Location2.X=2300.736mil|Location1.Y=1430.424mil|Location2.Y=1439.365mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.678mil &lt; 3.937mil) Between Via (2280.905mil,1441.102mil) from Top Layer to Bottom Layer And Via (2312.284mil,1424.932mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [3.678mil] / [Bottom Solder] Mask Sliver [3.678mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2283.312mil|Location2.X=2288.499mil|Location1.Y=1491.009mil|Location2.Y=1496.196mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2283.312mil|Location2.X=2288.499mil|Location1.Y=1491.009mil|Location2.Y=1496.196mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.378mil &lt; 3.937mil) Between Via (2285.905mil,1476.102mil) from Top Layer to Bottom Layer And Via (2285.905mil,1511.102mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [3.378mil] / [Bottom Solder] Mask Sliver [3.378mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2283.312mil|Location2.X=2288.499mil|Location1.Y=1526.009mil|Location2.Y=1531.196mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2283.312mil|Location2.X=2288.499mil|Location1.Y=1526.009mil|Location2.Y=1531.196mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.378mil &lt; 3.937mil) Between Via (2285.905mil,1511.102mil) from Top Layer to Bottom Layer And Via (2285.905mil,1546.102mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [3.378mil] / [Bottom Solder] Mask Sliver [3.378mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2326.501mil|Location2.X=2331.688mil|Location1.Y=1420.424mil|Location2.Y=1425.611mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2326.501mil|Location2.X=2331.688mil|Location1.Y=1420.424mil|Location2.Y=1425.611mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.217mil &lt; 3.937mil) Between Via (2312.284mil,1424.932mil) from Top Layer to Bottom Layer And Via (2345.905mil,1421.102mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2.217mil] / [Bottom Solder] Mask Sliver [2.217mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2396.749mil|Location2.X=2401.936mil|Location1.Y=1417.96mil|Location2.Y=1423.147mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2396.749mil|Location2.X=2401.936mil|Location1.Y=1417.96mil|Location2.Y=1423.147mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.425mil &lt; 3.937mil) Between Via (2382.323mil,1420.197mil) from Top Layer to Bottom Layer And Via (2416.362mil,1420.91mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2.425mil] / [Bottom Solder] Mask Sliver [2.425mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2552.229mil|Location2.X=2557.416mil|Location1.Y=1417.603mil|Location2.Y=1422.79mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2552.229mil|Location2.X=2557.416mil|Location1.Y=1417.603mil|Location2.Y=1422.79mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.378mil &lt; 3.937mil) Between Via (2537.323mil,1420.197mil) from Top Layer to Bottom Layer And Via (2572.323mil,1420.197mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [3.378mil] / [Bottom Solder] Mask Sliver [3.378mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2747.417mil|Location2.X=2754.266mil|Location1.Y=1578.353mil|Location2.Y=1587.015mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2747.417mil|Location2.X=2754.266mil|Location1.Y=1578.353mil|Location2.Y=1587.015mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.889mil &lt; 3.937mil) Between Via (2734.619mil,1575.569mil) from Top Layer to Bottom Layer And Via (2765.401mil,1593.275mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [3.889mil] / [Bottom Solder] Mask Sliver [3.889mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2774.317mil|Location2.X=2781.537mil|Location1.Y=1601.206mil|Location2.Y=1608.134mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2774.317mil|Location2.X=2781.537mil|Location1.Y=1601.206mil|Location2.Y=1608.134mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.017mil &lt; 3.937mil) Between Via (2765.401mil,1593.275mil) from Top Layer to Bottom Layer And Via (2788.419mil,1617.805mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [2.017mil] / [Bottom Solder] Mask Sliver [2.017mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBURGSVIJC5DHWR0K4XWVZ2XE5XPCNDNYHNXPCEAUBISACKXG0E"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1648.551mil|Location2.X=1653.738mil|Location1.Y=1411.049mil|Location2.Y=1416.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1648.551mil|Location2.X=1653.738mil|Location1.Y=1411.049mil|Location2.Y=1416.236mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.017mil &lt; 3.937mil) Between Pad D1C-1(1671.353mil,1428.407mil) on Top Layer And Text "D1C" (1644.636mil,1333.58mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.017mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1648.551mil|Location2.X=1653.738mil|Location1.Y=1344.12mil|Location2.Y=1349.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1648.551mil|Location2.X=1653.738mil|Location1.Y=1344.12mil|Location2.Y=1349.307mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.017mil &lt; 3.937mil) Between Pad D1C-2(1671.353mil,1361.478mil) on Top Layer And Text "D1C" (1644.636mil,1333.58mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [3.017mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2322.3mil|Location2.X=2329.053mil|Location1.Y=1121.381mil|Location2.Y=1130.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2322.3mil|Location2.X=2329.053mil|Location1.Y=1121.381mil|Location2.Y=1130.858mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.787mil &lt; 3.937mil) Between Pad J10-6(2330mil,1145mil) on Multi-Layer And Track (2330mil,1130mil)(2330mil,1145mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.787mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDROT0LZGKCTZEDC4INW03LL3CUHVWJSYALAIF12BYVVXOLOOJS3FF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=3.937mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1645.482mil|Location2.X=1649.106mil|Location1.Y=2143.4mil|Location2.Y=2147.025mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1645.482mil|Location2.X=1649.106mil|Location1.Y=2143.4mil|Location2.Y=2147.025mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Arc (1650.739mil,2145.213mil) on Top Overlay And Text "D1I" (1642.785mil,2140.431mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.957mil|Location1.Y=1065.251mil|Location2.Y=1068.875mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.957mil|Location1.Y=1065.251mil|Location2.Y=1068.875mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Arc (1652.59mil,1067.063mil) on Top Overlay And Text "D1A" (1644.636mil,1062.281mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.956mil|Location1.Y=1606.55mil|Location2.Y=1610.174mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.956mil|Location1.Y=1606.55mil|Location2.Y=1610.174mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Arc (1652.59mil,1608.362mil) on Top Overlay And Text "D1E" (1644.636mil,1603.58mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.956mil|Location1.Y=1876.55mil|Location2.Y=1880.174mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.956mil|Location1.Y=1876.55mil|Location2.Y=1880.174mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Arc (1652.59mil,1878.362mil) on Top Overlay And Text "D1G" (1644.636mil,1873.58mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.956mil|Location1.Y=2411.55mil|Location2.Y=2415.174mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.956mil|Location1.Y=2411.55mil|Location2.Y=2415.174mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Arc (1652.59mil,2413.362mil) on Top Overlay And Text "D1K" (1644.636mil,2408.58mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.957mil|Location1.Y=2675.251mil|Location2.Y=2678.875mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1647.332mil|Location2.X=1650.957mil|Location1.Y=2675.251mil|Location2.Y=2678.875mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Arc (1652.59mil,2677.063mil) on Top Overlay And Text "D1M" (1644.636mil,2672.281mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2948.795mil|Location2.X=2952.419mil|Location1.Y=1605.9mil|Location2.Y=1609.525mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2948.795mil|Location2.X=2952.419mil|Location1.Y=1605.9mil|Location2.Y=1609.525mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Arc (2956.417mil,1611.706mil) on Bottom Overlay And Text "RN1" (2946.652mil,1565.006mil) on Bottom Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3593.027mil|Location2.X=3599.984mil|Location1.Y=1211.368mil|Location2.Y=1218.972mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3593.027mil|Location2.X=3599.984mil|Location1.Y=1211.368mil|Location2.Y=1218.972mil|Absolute=True">Silk To Silk Clearance Constraint: (1.396mil &lt; 3.937mil) Between Arc (3592.052mil,1213.42mil) on Top Overlay And Text "D1B" (3639.994mil,1220.016mil) on Top Overlay Silk Text to Silk Clearance [1.396mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3051.047mil|Location2.X=3060.619mil|Location1.Y=1019.109mil|Location2.Y=1025.757mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3051.047mil|Location2.X=3060.619mil|Location1.Y=1019.109mil|Location2.Y=1025.757mil|Absolute=True">Silk To Silk Clearance Constraint: (3.657mil &lt; 3.937mil) Between Region (315 hole(s)) Top Overlay And Text "Project Mewtwo" (2805mil,983.329mil) on Top Overlay Silk Text to Silk Clearance [3.657mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1332.484mil|Location2.X=1337.671mil|Location1.Y=1257.407mil|Location2.Y=1262.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1332.484mil|Location2.X=1337.671mil|Location1.Y=1257.407mil|Location2.Y=1262.593mil|Absolute=True">Silk To Silk Clearance Constraint: (0.869mil &lt; 3.937mil) Between Text "BT1" (1245mil,1250mil) on Top Overlay And Track (1337.48mil,1083.543mil)(1337.48mil,1374.882mil) on Top Overlay Silk Text to Silk Clearance [0.869mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1330.634mil|Location2.X=1335.821mil|Location1.Y=2682.407mil|Location2.Y=2687.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1330.634mil|Location2.X=1335.821mil|Location1.Y=2682.407mil|Location2.Y=2687.593mil|Absolute=True">Silk To Silk Clearance Constraint: (3.853mil &lt; 3.937mil) Between Text "BT11" (1215mil,2675mil) on Top Overlay And Track (1337.122mil,2609.981mil)(1337.122mil,2901.32mil) on Top Overlay Silk Text to Silk Clearance [3.853mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.41mil|Location2.X=3918.597mil|Location1.Y=2837.722mil|Location2.Y=2842.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3913.41mil|Location2.X=3918.597mil|Location1.Y=2837.722mil|Location2.Y=2842.909mil|Absolute=True">Silk To Silk Clearance Constraint: (3.031mil &lt; 3.937mil) Between Text "BT12" (3912.52mil,2830.315mil) on Top Overlay And Track (3912.52mil,2753.543mil)(3912.52mil,3044.882mil) on Top Overlay Silk Text to Silk Clearance [3.031mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1330.965mil|Location2.X=1336.152mil|Location1.Y=2804.064mil|Location2.Y=2809.251mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1330.965mil|Location2.X=1336.152mil|Location1.Y=2804.064mil|Location2.Y=2809.251mil|Absolute=True">Silk To Silk Clearance Constraint: (3.19mil &lt; 3.937mil) Between Text "BT13" (1205mil,2770mil) on Top Overlay And Track (1337.122mil,2609.981mil)(1337.122mil,2901.32mil) on Top Overlay Silk Text to Silk Clearance [3.19mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1648.522mil|Location2.X=1655.276mil|Location1.Y=1382.251mil|Location2.Y=1391.717mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1648.522mil|Location2.X=1655.276mil|Location1.Y=1382.251mil|Location2.Y=1391.717mil|Absolute=True">Silk To Silk Clearance Constraint: (3.703mil &lt; 3.937mil) Between Text "D1C" (1644.636mil,1333.58mil) on Top Overlay And Track (1656.59mil,1391.005mil)(1656.59mil,1398.879mil) on Top Overlay Silk Text to Silk Clearance [3.703mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3864.077mil|Location2.X=3869.265mil|Location1.Y=3045.835mil|Location2.Y=3051.022mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3864.077mil|Location2.X=3869.265mil|Location1.Y=3045.835mil|Location2.Y=3051.022mil|Absolute=True">Silk To Silk Clearance Constraint: (3.156mil &lt; 3.937mil) Between Text "J1" (3853.342mil,3055.006mil) on Top Overlay And Track (3686.142mil,3044.882mil)(3912.52mil,3044.882mil) on Top Overlay Silk Text to Silk Clearance [3.156mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1357.413mil|Location2.X=1362.6mil|Location1.Y=2901.554mil|Location2.Y=2906.741mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1357.413mil|Location2.X=1362.6mil|Location1.Y=2901.554mil|Location2.Y=2906.741mil|Absolute=True">Silk To Silk Clearance Constraint: (1.718mil &lt; 3.937mil) Between Text "J2" (1346.678mil,2910.006mil) on Top Overlay And Track (1337.122mil,2901.32mil)(1563.501mil,2901.32mil) on Top Overlay Silk Text to Silk Clearance [1.718mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3847.413mil|Location2.X=3852.6mil|Location1.Y=2505.835mil|Location2.Y=2511.022mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3847.413mil|Location2.X=3852.6mil|Location1.Y=2505.835mil|Location2.Y=2511.022mil|Absolute=True">Silk To Silk Clearance Constraint: (3.156mil &lt; 3.937mil) Between Text "J3" (3836.677mil,2515.006mil) on Top Overlay And Track (3681.142mil,2504.882mil)(3907.52mil,2504.882mil) on Top Overlay Silk Text to Silk Clearance [3.156mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3842.413mil|Location2.X=3847.6mil|Location1.Y=1975.835mil|Location2.Y=1981.022mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3842.413mil|Location2.X=3847.6mil|Location1.Y=1975.835mil|Location2.Y=1981.022mil|Absolute=True">Silk To Silk Clearance Constraint: (3.156mil &lt; 3.937mil) Between Text "J5" (3831.677mil,1985.006mil) on Top Overlay And Track (3676.142mil,1974.882mil)(3902.52mil,1974.882mil) on Top Overlay Silk Text to Silk Clearance [3.156mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3847.413mil|Location2.X=3852.6mil|Location1.Y=1420.835mil|Location2.Y=1426.022mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3847.413mil|Location2.X=3852.6mil|Location1.Y=1420.835mil|Location2.Y=1426.022mil|Absolute=True">Silk To Silk Clearance Constraint: (3.156mil &lt; 3.937mil) Between Text "J7" (3836.677mil,1430.006mil) on Top Overlay And Track (3681.142mil,1419.882mil)(3907.52mil,1419.882mil) on Top Overlay Silk Text to Silk Clearance [3.156mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1352.413mil|Location2.X=1357.6mil|Location1.Y=1375.835mil|Location2.Y=1381.022mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1352.413mil|Location2.X=1357.6mil|Location1.Y=1375.835mil|Location2.Y=1381.022mil|Absolute=True">Silk To Silk Clearance Constraint: (3.156mil &lt; 3.937mil) Between Text "J8" (1341.678mil,1385.006mil) on Top Overlay And Track (1337.48mil,1374.882mil)(1563.858mil,1374.882mil) on Top Overlay Silk Text to Silk Clearance [3.156mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3132.619mil|Location2.X=3136.243mil|Location1.Y=2924.117mil|Location2.Y=2927.742mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\BMS Slave Device R1.5\BMS Slave Device R1.5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3132.619mil|Location2.X=3136.243mil|Location1.Y=2924.117mil|Location2.Y=2927.742mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 3.937mil) Between Text "R1" (3083.342mil,2890.006mil) on Top Overlay And Text "R11N" (3178.856mil,2925.929mil) on Top Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,200 @@
+*************************************************************
+FileName = BMS Slave Device R1.5.GBR
+AutoAperture = True
+*************************************************************
+Generating : Top Layer
+      File : BMS Slave Device R1.5.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D15
+    D16
+    D36
+    D37
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : BMS Slave Device R1.5.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D15
+    D38
+    D39
+    D40
+    D46
+    D49
+    D50
+    D51
+    D55
+    D56
+    D57
+    D58
+    D59
+    D60
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : BMS Slave Device R1.5.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : BMS Slave Device R1.5.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
+    D35
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : BMS Slave Device R1.5.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D20
+    D21
+    D22
+    D28
+    D31
+    D32
+    D33
+    D34
+    D35
+    D61
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : BMS Slave Device R1.5.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D11
+    D16
+    D62
+*************************************************************
+
+*************************************************************
+Generating : Outline
+      File : BMS Slave Device R1.5.GM15
+
+    Adding Layer      : Outline
+
+
+Used DCodes :
+    D14
+    D15
+    D63
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : BMS Slave Device R1.5.GM13
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D11
+    D14
+    D16
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : BMS Slave Device R1.5.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : BMS Slave Device R1.5.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
