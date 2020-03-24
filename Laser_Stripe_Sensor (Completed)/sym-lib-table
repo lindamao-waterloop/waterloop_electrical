@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name IMU)(type Legacy)(uri ${KIPRJMOD}/IMU.lib)(options "")(descr ""))
+  (lib (name Laser_Stripe_Sensor)(type Legacy)(uri ${KIPRJMOD}/Laser_Stripe_Sensor.lib)(options "")(descr ""))
+)
