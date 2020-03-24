@@ -440,51 +440,6 @@ XTAL2
 Text Label 1950 4350 0    50   ~ 0
 XTAL1
 $Comp
-L Connector:TestPoint TP1
-U 1 1 5E2870AC
-P 2100 1550
-F 0 "TP1" V 2100 1738 50  0000 L CNN
-F 1 "TestPoint" V 2145 1738 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 1550 50  0001 C CNN
-F 3 "~" H 2300 1550 50  0001 C CNN
-	1    2100 1550
-	0    1    1    0   
-$EndComp
-Text Label 1950 1550 0    50   ~ 0
-MISO
-Text Label 1950 1650 0    50   ~ 0
-MOSI
-Text Label 1950 2250 0    50   ~ 0
-SCK
-Wire Wire Line
-	1900 1550 2100 1550
-$Comp
-L Connector:TestPoint TP2
-U 1 1 5E2A1554
-P 2100 1650
-F 0 "TP2" V 2100 1838 50  0000 L CNN
-F 1 "TestPoint" V 2145 1838 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 1650 50  0001 C CNN
-F 3 "~" H 2300 1650 50  0001 C CNN
-	1    2100 1650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1900 1650 2100 1650
-$Comp
-L Connector:TestPoint TP3
-U 1 1 5E2A9D0C
-P 2100 2250
-F 0 "TP3" V 2100 2450 50  0000 L CNN
-F 1 "TestPoint" V 2145 2438 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 2250 50  0001 C CNN
-F 3 "~" H 2300 2250 50  0001 C CNN
-	1    2100 2250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1900 2250 2100 2250
-$Comp
 L Connector:TestPoint TP4
 U 1 1 5E2B0888
 P 3800 900
@@ -506,36 +461,6 @@ F 3 "~" H 6150 900 50  0001 C CNN
 	1    5950 900 
 	1    0    0    -1  
 $EndComp
-Text Label 1950 2950 0    50   ~ 0
-AMP1+
-$Comp
-L Connector:TestPoint TP7
-U 1 1 5E2B528C
-P 2100 2950
-F 0 "TP7" V 2100 3138 50  0000 L CNN
-F 1 "TestPoint" V 2145 3138 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 2950 50  0001 C CNN
-F 3 "~" H 2300 2950 50  0001 C CNN
-	1    2100 2950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1900 2950 2100 2950
-Text Label 1950 2850 0    50   ~ 0
-AMP1-
-$Comp
-L Connector:TestPoint TP6
-U 1 1 5E2B7555
-P 2100 2850
-F 0 "TP6" V 2100 3038 50  0000 L CNN
-F 1 "TestPoint" V 2145 3038 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 2850 50  0001 C CNN
-F 3 "~" H 2300 2850 50  0001 C CNN
-	1    2100 2850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1900 2850 2100 2850
 Text Label 1950 3850 0    50   ~ 0
 ADC2
 $Comp
