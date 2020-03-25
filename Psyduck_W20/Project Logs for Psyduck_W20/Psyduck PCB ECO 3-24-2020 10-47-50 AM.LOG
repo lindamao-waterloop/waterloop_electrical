@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=NetJ1_2 Pin=U3-1
+Removed Pin From Net: NetName=GND Pin=U3-2
+Removed Pin From Net: NetName=5V Pin=U3-3
+Removed Pin From Net: NetName=5V Pin=U3-3
+Change Component Footprint: Designator=U3 Old Footprint= New Footprint=MCP1799
+Change Component Comment : Designator=U3 Old Comment=MCP1799T-5002H/DB New Comment=MCP1799
+Change Component Designator: OldDesignator=U3 NewDesignator=*
+Change component parameters: Designator = "U3" ("*"); UniqueID = "\ZNOIWBXG" ("\ZNOIWBXG")

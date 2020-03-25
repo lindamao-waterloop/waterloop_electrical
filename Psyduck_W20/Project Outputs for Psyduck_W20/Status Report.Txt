@@ -1,0 +1,30 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [Psyduck_W20.PrjPcb]
+   Generated File[psyduck 2.GTO]
+   Generated File[psyduck 2.GTP]
+   Generated File[psyduck 2.GTS]
+   Generated File[psyduck 2.GTL]
+   Generated File[psyduck 2.GBL]
+   Generated File[psyduck 2.GBS]
+   Generated File[psyduck 2.GBP]
+   Generated File[psyduck 2.GBO]
+   Generated File[psyduck 2.GM1]
+   Generated File[psyduck 2.GM13]
+   Generated File[psyduck 2.GM15]
+   Generated File[psyduck 2.GKO]
+   Generated File[psyduck 2.GPT]
+   Generated File[psyduck 2.GPB]
+   Generated File[psyduck 2.1]
+   Generated File[psyduck 2.GML]
+   Generated File[psyduck 2.GD1]
+   Generated File[psyduck 2.GG1]
+   Generated File[psyduck 2.RUL]
+   Generated File[psyduck 2.EXTREP]
+   Generated File[psyduck 2.REP]
+
+
+Files Generated   : 21
+Documents Printed : 0
+
+Finished Output Generation At 9:20:24 PM On 3/24/2020

@@ -1,0 +1,6 @@
+Change Component Comment : Designator= Old Comment=MCP1799T-5002H/DB  New Comment=NCP117
+Change Component Designator: OldDesignator= NewDesignator=U3
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=5V Pin=U3-2
+Added Pin To Net: NetName=5V Pin=U3-2
+Added Pin To Net: NetName=NetJ1_2 Pin=U3-3
