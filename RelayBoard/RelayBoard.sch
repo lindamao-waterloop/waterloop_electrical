@@ -316,78 +316,67 @@ F 9 "505004-0812" H 10550 100 50  0001 L CNN "Manufacturer_Part_Number"
 	1    9200 700 
 	1    0    0    -1  
 $EndComp
-Text GLabel 5250 1300 2    50   Input ~ 0
+Text GLabel 13350 1800 2    50   Input ~ 0
 GNDC
-$Comp
-L SamacSys_Parts:PJS008U-3000-0 J1
-U 1 1 5E66B127
-P 4350 1000
-F 0 "J1" H 4300 1717 50  0000 C CNN
-F 1 "Micro_SD_Card" H 4300 1626 50  0000 C CNN
-F 2 "SamacSys_Parts:PJS008U30000" H 5500 1300 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 4350 1000 50  0001 C CNN
-	1    4350 1000
-	1    0    0    -1  
-$EndComp
-Text GLabel 5250 1100 2    50   Input ~ 0
+Text GLabel 11650 1500 0    50   Input ~ 0
 SD_D0
-Text GLabel 5250 1200 2    50   Input ~ 0
+Text GLabel 11650 1600 0    50   Input ~ 0
 SD_D1
-Text GLabel 4350 1000 0    50   Input ~ 0
+Text GLabel 11650 900  0    50   Input ~ 0
 SD_D2
-Text GLabel 4350 1100 0    50   Input ~ 0
+Text GLabel 11650 1000 0    50   Input ~ 0
 SD_D3
-Text GLabel 4350 1400 0    50   Input ~ 0
+Text GLabel 11650 1300 0    50   Input ~ 0
 SD_CLK
-Text GLabel 4350 1200 0    50   Input ~ 0
+Text GLabel 11650 1100 0    50   Input ~ 0
 SD_CMD
-Text GLabel 5250 1000 2    50   Input ~ 0
+Text GLabel 11650 1400 0    50   Input ~ 0
 GNDD
-Text GLabel 4350 1300 0    50   Input ~ 0
+Text GLabel 11650 1200 0    50   Input ~ 0
 3V3
-Text GLabel 7450 1050 2    50   Input ~ 0
+Text GLabel 4900 1850 2    50   Input ~ 0
 CANH
-Text GLabel 7450 1250 2    50   Input ~ 0
+Text GLabel 4900 2050 2    50   Input ~ 0
 CANL
-Text GLabel 6450 950  0    50   Input ~ 0
+Text GLabel 3900 1750 0    50   Input ~ 0
 CANTX
-Text GLabel 6450 1050 0    50   Input ~ 0
+Text GLabel 3900 1850 0    50   Input ~ 0
 CANRX
-Text GLabel 6950 1550 3    50   Input ~ 0
+Text GLabel 4400 2350 3    50   Input ~ 0
 GNDD
-Text GLabel 6450 1350 0    50   Input ~ 0
+Text GLabel 3900 2150 0    50   Input ~ 0
 GNDD
-Text GLabel 6450 1250 0    50   Input ~ 0
+Text GLabel 3900 2050 0    50   Input ~ 0
 3V3
-Text GLabel 6950 750  1    50   Input ~ 0
+Text GLabel 4400 1550 1    50   Input ~ 0
 5V
 $Comp
 L Interface_CAN_LIN:TJA1051T-3 U3
 U 1 1 5E6B6C50
-P 6950 1150
-F 0 "U3" H 6950 1731 50  0000 C CNN
-F 1 "TJA1051T-3" H 6950 1640 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6950 650 50  0001 C CIN
-F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 6950 1150 50  0001 C CNN
-	1    6950 1150
+P 4400 1950
+F 0 "U3" H 4400 2531 50  0000 C CNN
+F 1 "TJA1051T-3" H 4400 2440 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4400 1450 50  0001 C CIN
+F 3 "http://www.nxp.com/documents/data_sheet/TJA1051.pdf" H 4400 1950 50  0001 C CNN
+	1    4400 1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Regulator_Linear:LF33_TO252 U4
 U 1 1 5E6D356C
-P 8350 1000
-F 0 "U4" H 8350 1242 50  0000 C CNN
-F 1 "LF33_TO252" H 8350 1151 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 8350 1225 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c4/0e/7e/2a/be/bc/4c/bd/CD00000546.pdf/files/CD00000546.pdf/jcr:content/translations/en.CD00000546.pdf" H 8350 950 50  0001 C CNN
-	1    8350 1000
+P 5900 800
+F 0 "U4" H 5900 1042 50  0000 C CNN
+F 1 "LF33_TO252" H 5900 951 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 5900 1025 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c4/0e/7e/2a/be/bc/4c/bd/CD00000546.pdf/files/CD00000546.pdf/jcr:content/translations/en.CD00000546.pdf" H 5900 750 50  0001 C CNN
+	1    5900 800 
 	1    0    0    -1  
 $EndComp
-Text GLabel 8050 1000 0    50   Input ~ 0
+Text GLabel 5600 800  0    50   Input ~ 0
 5V
-Text GLabel 8650 1000 2    50   Input ~ 0
+Text GLabel 6200 800  2    50   Input ~ 0
 3V3
-Text GLabel 8350 1300 3    50   Input ~ 0
+Text GLabel 5900 1100 3    50   Input ~ 0
 GNDD
 Text GLabel 8600 2100 2    50   Input ~ 0
 CANL
@@ -483,23 +472,23 @@ F 3 "~" H 4250 4900 50  0001 C CNN
 $EndComp
 Text GLabel 4150 4900 1    50   Input ~ 0
 3V3
-Text GLabel 8100 1550 1    50   Input ~ 0
+Text GLabel 5950 1900 1    50   Input ~ 0
 GNDC
-Text GLabel 8000 1550 1    50   Input ~ 0
+Text GLabel 5850 1900 1    50   Input ~ 0
 SWCLK
-Text GLabel 7900 1550 1    50   Input ~ 0
+Text GLabel 5750 1900 1    50   Input ~ 0
 SWDIO
-Text GLabel 7800 1550 1    50   Input ~ 0
+Text GLabel 5650 1900 1    50   Input ~ 0
 5V_CAN
 $Comp
 L Connector:Conn_01x04_Male J13
 U 1 1 5E67695C
-P 7900 1750
-F 0 "J13" V 7962 1894 50  0000 L CNN
-F 1 "Conn_01x04_Male" V 8053 1894 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7900 1750 50  0001 C CNN
-F 3 "~" H 7900 1750 50  0001 C CNN
-	1    7900 1750
+P 5750 2100
+F 0 "J13" V 5812 2244 50  0000 L CNN
+F 1 "Conn_01x04_Male" V 5903 2244 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5750 2100 50  0001 C CNN
+F 3 "~" H 5750 2100 50  0001 C CNN
+	1    5750 2100
 	0    -1   -1   0   
 $EndComp
 Text GLabel 6350 3900 2    50   Input ~ 0
@@ -1253,17 +1242,17 @@ Text GLabel 9200 2400 0    50   Input ~ 0
 GNDC
 Text GLabel 9200 2300 0    50   Input ~ 0
 GNDC
-Text Notes 8750 3050 0    50   ~ 0
-where's the cable shield at
+Text Notes 6900 350  0    50   ~ 0
+where does the cable shielding connect
 $Comp
 L Device:R_Small_US R18
 U 1 1 5E707EB3
-P 7450 1150
-F 0 "R18" H 7518 1196 50  0000 L CNN
-F 1 "120Ω" H 7518 1105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7450 1150 50  0001 C CNN
-F 3 "~" H 7450 1150 50  0001 C CNN
-	1    7450 1150
+P 4900 1950
+F 0 "R18" H 4968 1996 50  0000 L CNN
+F 1 "120Ω" H 4968 1905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4900 1950 50  0001 C CNN
+F 3 "~" H 4900 1950 50  0001 C CNN
+	1    4900 1950
 	1    0    0    -1  
 $EndComp
 Text GLabel 7450 3100 2    50   Input ~ 0
@@ -1382,27 +1371,25 @@ F 3 "" H 2000 7400 50  0001 C CNN
 	1    2000 7400
 	1    0    0    -1  
 $EndComp
-Text GLabel 8450 2850 2    50   Input ~ 0
+Text GLabel 8300 650  2    50   Input ~ 0
 5V_CAN
-Text GLabel 8450 3150 2    50   Input ~ 0
+Text GLabel 8300 950  2    50   Input ~ 0
 GNDC
-Text GLabel 8450 3050 2    50   Input ~ 0
+Text GLabel 8300 850  2    50   Input ~ 0
 CANL
-Text GLabel 8450 2950 2    50   Input ~ 0
+Text GLabel 8300 750  2    50   Input ~ 0
 CANH
 $Comp
 L Connector:Conn_01x04_Male J3
 U 1 1 5E689F37
-P 8250 2950
-F 0 "J3" H 8358 3231 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 8358 3140 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 8250 2950 50  0001 C CNN
-F 3 "~" H 8250 2950 50  0001 C CNN
-	1    8250 2950
+P 8100 750
+F 0 "J3" H 8208 1031 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 8208 940 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 8100 750 50  0001 C CNN
+F 3 "~" H 8100 750 50  0001 C CNN
+	1    8100 750 
 	1    0    0    -1  
 $EndComp
-Text GLabel 5250 1400 2    50   Input ~ 0
-GNDC
 $Comp
 L SI-52008-F:SI-52008-F J7
 U 1 1 5E7365CB
@@ -1417,20 +1404,9 @@ F 6 "B1" H 8750 4050 50  0001 L BNN "Field6"
 	1    8750 4050
 	1    0    0    -1  
 $EndComp
-$Comp
-L SamacSys_Parts:1725656 J2
-U 1 1 5E6836EC
-P 10200 5500
-F 0 "J2" H 10280 5492 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10280 5401 50  0000 L CNN
-F 2 "SamacSys_Parts:1725656" H 10200 5500 50  0001 C CNN
-F 3 "~" H 10200 5500 50  0001 C CNN
-	1    10200 5500
-	0    -1   -1   0   
-$EndComp
-Text GLabel 10200 5500 3    50   Input ~ 0
+Text GLabel 6350 1900 3    50   Input ~ 0
 GND24
-Text GLabel 10200 4700 1    50   Input ~ 0
+Text GLabel 6350 1800 1    50   Input ~ 0
 24V
 $Comp
 L SI-52008-F:SI-52008-F J8
@@ -1444,6 +1420,126 @@ F 4 "15.21mm" H 8750 5800 50  0001 L BNN "Field4"
 F 5 "Manufacturer Recommendations" H 8750 5800 50  0001 L BNN "Field5"
 F 6 "B1" H 8750 5800 50  0001 L BNN "Field6"
 	1    8750 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L XT_60:XT60_YELLOW Q?
+U 1 1 5EDC711A
+P 6550 1800
+F 0 "Q?" H 6678 1796 50  0000 L CNN
+F 1 "XT60_YELLOW" H 6678 1705 50  0000 L CNN
+F 2 "AMASS_XT60PB-M" H 6550 1800 50  0001 L BNN
+F 3 "AMASS" H 6550 1800 50  0001 L BNN
+F 4 "IPC 2222A" H 6550 1800 50  0001 L BNN "Field4"
+F 5 "15.9 mm" H 6550 1800 50  0001 L BNN "Field5"
+F 6 "1.2" H 6550 1800 50  0001 L BNN "Field6"
+	1    6550 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 8300 1200 2    50   Input ~ 0
+5V_CAN
+Text GLabel 8300 1500 2    50   Input ~ 0
+GNDC
+Text GLabel 8300 1400 2    50   Input ~ 0
+CANL
+Text GLabel 8300 1300 2    50   Input ~ 0
+CANH
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5EDEF3AA
+P 8100 1300
+F 0 "J?" H 8208 1581 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 8208 1490 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 8100 1300 50  0001 C CNN
+F 3 "~" H 8100 1300 50  0001 C CNN
+	1    8100 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 1200 2    50   Input ~ 0
+5V_CAN
+Text GLabel 6850 1500 2    50   Input ~ 0
+GNDC
+Text GLabel 6850 1400 2    50   Input ~ 0
+CANL
+Text GLabel 6850 1300 2    50   Input ~ 0
+CANH
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5EDF0F47
+P 6650 1300
+F 0 "J?" H 6758 1581 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 6758 1490 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6650 1300 50  0001 C CNN
+F 3 "~" H 6650 1300 50  0001 C CNN
+	1    6650 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 7550 650  2    50   Input ~ 0
+5V_CAN
+Text GLabel 7550 950  2    50   Input ~ 0
+GNDC
+Text GLabel 7550 850  2    50   Input ~ 0
+CANL
+Text GLabel 7550 750  2    50   Input ~ 0
+CANH
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5EDF7919
+P 7350 750
+F 0 "J?" H 7458 1031 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 7458 940 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 7350 750 50  0001 C CNN
+F 3 "~" H 7350 750 50  0001 C CNN
+	1    7350 750 
+	1    0    0    -1  
+$EndComp
+Text GLabel 7550 1200 2    50   Input ~ 0
+5V_CAN
+Text GLabel 7550 1500 2    50   Input ~ 0
+GNDC
+Text GLabel 7550 1400 2    50   Input ~ 0
+CANL
+Text GLabel 7550 1300 2    50   Input ~ 0
+CANH
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5EDF7923
+P 7350 1300
+F 0 "J?" H 7458 1581 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 7458 1490 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 7350 1300 50  0001 C CNN
+F 3 "~" H 7350 1300 50  0001 C CNN
+	1    7350 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 6850 650  2    50   Input ~ 0
+5V_CAN
+Text GLabel 6850 950  2    50   Input ~ 0
+GNDC
+Text GLabel 6850 850  2    50   Input ~ 0
+CANL
+Text GLabel 6850 750  2    50   Input ~ 0
+CANH
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5EDF792D
+P 6650 750
+F 0 "J?" H 6758 1031 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 6758 940 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 6650 750 50  0001 C CNN
+F 3 "~" H 6650 750 50  0001 C CNN
+	1    6650 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Micro_SD_Card_Det_Hirose_DM3AT J?
+U 1 1 5EE25373
+P 12550 1300
+F 0 "J?" H 12500 2117 50  0000 C CNN
+F 1 "Micro_SD_Card_Det_Hirose_DM3AT" H 12500 2026 50  0000 C CNN
+F 2 "" H 14600 2000 50  0001 C CNN
+F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 12550 1400 50  0001 C CNN
+	1    12550 1300
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

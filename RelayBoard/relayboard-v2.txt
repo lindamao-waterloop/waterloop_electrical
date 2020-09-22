@@ -1,0 +1,60 @@
+RelayBoard v2
+
+schematic changes
+- maybe use a smaller cheaper eth port without integrated magnetics?
+  - already have them might as well keep them
+- remove the weird connectors on the bottom, and just add some jst connectors along the sides
+- add 24V to 5V based on ian's design
+  - battery level indicator lights or something? using voltage divider and analog read
+    - What was the allowable range again? 21.6-25.2? 22-26?
+      - https://www.reddit.com/r/AskElectronics/comments/9dbno3/lm3914_voltage_indicator_with_high_voltage/
+        - dot mode. can we use lower power?
+- add xt60 power connector option
+  - cad a custom fire retardant metal lv battery enclosure around it?
+    - no
+  - put it at the opposite edge as the ethernet ports, with 6 jst connectors along the sides
+- add a few indicator leds to debug with
+  - stm32 should have very good debugging capabilities right
+- add more decoupling caps in various places around the board
+- add accelerometer + laser sensor connector + plug into spacex arduino? :P
+  - different grounding method required
+- use a more standard SD card reader lol
+
+meh schematic changes
+- add wireless capabilities?? meh unlikely to be useful
+- maybe use atsam3x8e instead? meh...
+  - add a 16U2 for usb flashing lol
+  - maybe i should just use the regular atmega2560 if i'm going for accessibility,
+    and just add separate W5100 and canbus controllers over SPI.
+  - but that probably doesn't fit in an Uno shield form factor, especially if i'm only using the top.
+  - meh whatever, the atsam3x8e probably doesn't fit either lol
+
+layout changes
+- arduino shield shape
+  - but add something fun. How badly can i artistically mangle the edge and still have it structurally stable / manufacturable?
+  - plated keychain hole :P
+- no more vias through footprints
+- have a better mounting and grounding system
+- have actual silkscreen so i can solder stuff more easily
+- use 4 layer board, gnd and vcc in the middle
+  - should i put the signal lines in the middle of the stackup? will they interfere with each other more?
+  - just leave gnd and vcc in the middle so you can see the traces :P
+- use the horizontal/vertical signal routing method
+- set all the via and track settings to jlcpcb's minimums
+- use dogbone for the bga
+- leave all the components on the top. much easier to deal with mechanically this way
+  - except maybe the sd card.
+
+assembly
+- toaster oven reflow
+  - LOTS of test points on the bottom of the board to verify BGA success
+- what solder paste should i get?
+- get this soldering iron https://www.amazon.com/UY-CHAN-Programmable-Pocket-size-Acceleration/dp/B06XBFTKMY
+- use stencil from jlcpcb
+  - can change footprints from handsolder to regular
+
+misc
+- get design roasted by chawthri, linda, ian, connor
+- is there any way i can do smaller scale testing of this thing? like connecting breakout boards on a breadboard.
+  - or ordering a bunch of small boards that can be connected manually
+
